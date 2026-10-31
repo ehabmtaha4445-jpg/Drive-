@@ -26,31 +26,32 @@ header h1{margin:0 0 8px;font-size:18px;font-weight:700}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .btn.sm{padding:6px 10px;font-size:14px}
 .btn.red{background:var(--red);color:#fff}
-main{padding:12px;max-width:640px;margin:auto}
+.btn.full{width:100%}
+main{padding:12px;max-width:680px;margin:auto}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
 .card h2{margin:0 0 10px;font-size:16px}
+details.card>summary{font-weight:700;cursor:pointer;font-size:16px}
+details.card[open]>summary{margin-bottom:10px}
 label.f{display:block;font-size:14px;color:var(--muted);margin:10px 0 4px}
-input[type=text],input[type=number],input[type=date],textarea,select.in{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);font:inherit;background:var(--bg);color:var(--ink)}
+input[type=text],input[type=number],input[type=date],input[type=password],textarea,select.in{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);font:inherit;background:var(--bg);color:var(--ink)}
 .row{display:flex;gap:8px}.row>*{flex:1}
 .photo{border:2px dashed var(--line);border-radius:12px;overflow:hidden;background:var(--bg)}
-.photo .pv{min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.photo .pv{min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;text-align:center;padding:4px}
 .photo .pv img{display:block;width:100%;max-height:220px;object-fit:cover}
 .photo .pb{display:flex;gap:6px;padding:8px}.photo .pb button{flex:1}
-.badge{display:inline-block;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:700;background:var(--bg)}
-.badge.bad{background:#b3261e22;color:var(--red)}.badge.good{background:#1f7a3d22;color:var(--ok)}
-.alert{background:#b3261e22;border:1px solid var(--red);color:var(--red);border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:700}
-.okbox{background:#1f7a3d22;border:1px solid var(--ok);color:var(--ok);border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:700}
-.modal{position:fixed;inset:0;background:#000b;z-index:25;display:none;align-items:center;justify-content:center;padding:14px}
-.modal .box{background:var(--card);border-radius:16px;padding:14px;max-width:420px;width:100%;text-align:center}
-.modal canvas{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.qw{color:var(--red);font-size:13px;font-weight:700;padding:0 10px 4px}
+.ocr{font-size:13px;color:var(--muted);margin-top:4px;min-height:4px}
+.chip{border:1px solid var(--green2);color:var(--green2);background:transparent;border-radius:999px;padding:3px 10px;font:inherit;font-size:13px;margin:2px;cursor:pointer}
 .sec{border-inline-start:5px solid var(--amber);padding-inline-start:12px}
 .sec.fuel{border-color:var(--green2)}
 .sec.exp{border-color:var(--red)}
 .items .it{display:flex;gap:6px;margin-bottom:6px}
-.items .it input:first-child{flex:2}.items .it input:nth-child(2){flex:1}
+.items .it select{flex:1.4;padding:11px;border-radius:10px;border:1px solid var(--line);font:inherit;background:var(--bg);color:var(--ink)}
+.items .it input{flex:1}
+.items .nm{margin-bottom:6px}
 .tot{display:flex;justify-content:space-between;font-weight:700;padding-top:8px;border-top:1px solid var(--line);margin-top:8px}
 nav{position:fixed;bottom:0;inset-inline:0;background:var(--card);border-top:1px solid var(--line);display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:6}
-nav button{flex:1;border:0;background:none;padding:10px 4px 8px;font:inherit;font-size:13px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button{flex:1;border:0;background:none;padding:10px 2px 8px;font:inherit;font-size:12px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:2px}
 nav button svg{width:24px;height:24px}
 nav button.on{color:var(--green2);font-weight:700}
 .bal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
@@ -69,12 +70,38 @@ nav button.on{color:var(--green2);font-weight:700}
 .viewer img{max-width:100%;max-height:100%;border-radius:8px}
 .toast{position:fixed;bottom:96px;inset-inline:16px;background:var(--green);color:#fff;padding:12px;border-radius:12px;text-align:center;z-index:30;display:none}
 .view{display:none}.view.on{display:block}
+.badge{display:inline-block;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:700;background:var(--bg);margin:2px 0}
+.badge.bad{background:#b3261e22;color:var(--red)}.badge.good{background:#1f7a3d22;color:var(--ok)}.badge.warn{background:#e8a81d33;color:var(--ink)}
+.alert{background:#b3261e22;border:1px solid var(--red);color:var(--red);border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:700}
+.okbox{background:#1f7a3d22;border:1px solid var(--ok);color:var(--ok);border-radius:12px;padding:10px 12px;margin-bottom:12px;font-weight:700}
+.modal{position:fixed;inset:0;background:#000b;z-index:25;display:none;align-items:center;justify-content:center;padding:14px}
+.modal .box{background:var(--card);border-radius:16px;padding:14px;max-width:420px;width:100%;text-align:center}
+.modal canvas{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
 .pend{border:2px solid var(--amber)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;cursor:pointer;font:inherit;color:var(--ink)}
+.tile b{display:block;font-size:30px;line-height:1.2}.tile span{font-size:13px;color:var(--muted)}
+.tile.hot{border-color:var(--amber);background:#e8a81d22}.tile.red{border-color:var(--red);background:#b3261e18}.tile.red b{color:var(--red)}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.fchips .chip.on{background:var(--green2);color:#fff}
+.rtable{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0}
+.rtable th,.rtable td{border:1px solid var(--line);padding:5px 6px;text-align:start;vertical-align:top}
+.rtable th{background:var(--bg)}
+.scroll{overflow-x:auto}
+pre.code{direction:ltr;text-align:left;background:var(--bg);border-radius:10px;padding:10px;font-size:12px;overflow:auto;margin:6px 0}
+small.h{color:var(--muted);font-size:13px;display:block;margin-top:4px}
 body[data-mode=driver] .adm{display:none!important}
 body[data-mode=admin] .drvonly{display:none!important}
 body[data-mode=driver]{padding-bottom:24px}
-textarea.in{min-height:90px}
 :focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+#printArea{display:none}
+@media print{
+  body>*:not(#printArea){display:none!important}
+  #printArea{display:block!important;color:#000;background:#fff;padding:0;font-size:12px}
+  #printArea .rtable th,#printArea .rtable td{border:1px solid #888;color:#000}
+  #printArea .rtable th{background:#eee}
+  body{background:#fff;padding:0}
+}
 </style>
 </head>
 <body>
@@ -89,62 +116,82 @@ textarea.in{min-height:90px}
 
 <main>
   <!-- نقلة جديدة -->
+  <section class="view adm" id="v-dash"></section>
+
   <section class="view on" id="v-new">
-    <div class="card">
+    <div class="drvonly" id="balBox"></div>
+    <div class="card drvonly" id="addBanner" style="display:none;border:2px solid var(--amber)"><b id="addTxt"></b><button class="btn ghost sm" id="addCancel" style="margin-inline-start:10px">إلغاء</button></div>
+    <div class="card" id="cTop">
       <div class="row">
         <div><label class="f" style="margin-top:0">التاريخ</label><input type="date" id="tDate"></div>
-        <div><label class="f" style="margin-top:0">وجهة / ملاحظة</label><input type="text" id="tNote" placeholder="اختياري"></div>
+        <div><label class="f" style="margin-top:0">العربية</label><input type="text" id="tCar" list="carList" placeholder="رقم / اسم العربية"><datalist id="carList"></datalist></div>
       </div>
+      <label class="f">وجهة / ملاحظة</label><input type="text" id="tNote" placeholder="اختياري">
     </div>
 
-    <div class="card sec">
+    <div class="card sec" id="cOdo">
       <h2>١. عداد العربية</h2>
       <div class="photo" id="ph-odo"></div>
       <label class="f">قراءة العداد (كم)</label>
       <input type="number" inputmode="decimal" id="odo" placeholder="مثال: 175950">
+      <div class="ocr" id="ocr-odo"></div>
     </div>
 
-    <div class="card sec fuel">
+    <div class="card sec fuel" id="cFuel">
       <h2>٢. عداد التفويلة</h2>
       <div class="photo" id="ph-fuel"></div>
       <div class="row">
         <div><label class="f">لترات</label><input type="number" inputmode="decimal" id="liters"></div>
         <div class="adm"><label class="f">المبلغ</label><input type="number" inputmode="decimal" id="fuelAmt"></div>
       </div>
+      <div class="ocr" id="ocr-fuel"></div>
       <label class="adm" style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:15px">
         <input type="checkbox" id="fuelDeduct"> تخصم قيمة التفويلة من العهدة
       </label>
     </div>
 
-    <div class="card sec exp">
+    <div class="card sec exp" id="cExp">
       <h2>٣. مصاريف النقلة</h2>
+      <small class="h drvonly" id="expHint" style="margin:-4px 0 8px">لو المصاريف لسه ما اكتملتش، سيبها فاضية وابعت العدادين دلوقتي، وأضف المصاريف بعدين من «نقلاتي المُرسلة» وهتتربط بنفس النقلة.</small>
       <div class="photo" id="ph-exp"></div>
       <label class="f">بنود المصاريف</label>
       <div class="items" id="items"></div>
-      <button class="btn ghost sm" id="addItem" type="button">+ بند</button>
+      <button class="btn ghost sm" id="addItem" type="button">+ بند</button> <button class="btn ghost sm" id="copyLast" type="button">↻ نفس مصاريف آخر نقلة</button>
       <div class="tot"><span>إجمالي المصاريف</span><span id="expTot">0</span></div>
     </div>
 
-    <button class="btn" style="width:100%;padding:14px" id="saveTrip"><span class="adm">حفظ النقلة</span><span class="drvonly">حفظ وإرسال للمدير</span></button>
+    <div class="card sec" id="cVoice" style="border-inline-start-color:var(--green2)">
+      <h2>٤. ملاحظة صوتية (اختياري)</h2>
+      <div class="row"><button class="btn" id="recBtn" type="button">🎙 تسجيل</button><button class="btn ghost" id="recDel" type="button" style="display:none">حذف</button></div>
+      <audio id="recAudio" controls style="width:100%;margin-top:8px;display:none"></audio>
+      <small class="h" id="recInfo">لحد دقيقة. اتكلم عن أي حاجة غير عادية في النقلة.</small>
+    </div>
+    <button class="btn full" style="padding:14px" id="saveTrip"><span class="adm">حفظ النقلة</span><span class="drvonly" id="saveNewTxt">حفظ وإرسال للمدير</span><span class="drvonly" id="saveExpTxt" style="display:none">إرسال المصاريف للمدير</span></button>
     <div class="drvonly" id="v-sent" style="margin-top:16px"></div>
     <div class="drvonly" id="adminLink" style="text-align:center;margin-top:18px"></div>
   </section>
 
-  <!-- السجل -->
   <section class="view" id="v-log"></section>
-
-  <!-- العهدة -->
   <section class="view" id="v-cons"></section>
-
-  <!-- العهدة -->
   <section class="view" id="v-cust"></section>
+
+  <section class="view" id="v-more">
+    <details class="card" id="d-rep" open><summary>التقارير والتصدير</summary><div id="repForm"></div><div id="repOut"></div></details>
+    <details class="card"><summary>العربيات</summary><div id="carsBox"></div></details>
+    <details class="card"><summary>تصنيفات المصاريف</summary><div id="catsBox"></div></details>
+    <details class="card"><summary>حدود التنبيه</summary><div id="limBox"></div></details>
+    <details class="card"><summary>المزامنة مع السيرفر</summary><div id="syncBox"></div></details>
+    <details class="card"><summary>الإشعارات الفورية</summary><div id="notifBox"></div></details>
+    <details class="card"><summary>رمز المدير ونسخة احتياطية</summary><div id="pinBox"></div></details>
+  </section>
 </main>
 
 <nav class="adm">
-  <button data-v="new" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>نقلة جديدة</button>
+  <button data-v="dash" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>الرئيسية</button>
   <button data-v="log"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>السجل</button>
   <button data-v="cons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></svg>الاستهلاك</button>
   <button data-v="cust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg>العهدة</button>
+  <button data-v="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg>المزيد</button>
 </nav>
 
 <div class="modal" id="qrModal"><div class="box">
@@ -152,28 +199,32 @@ textarea.in{min-height:90px}
   <div id="qrLink" style="font-size:12px;color:var(--muted);word-break:break-all;margin-top:6px;direction:ltr"></div>
   <div class="row" style="margin-top:10px"><button class="btn" id="qrSend">إرسال للسائق</button><button class="btn ghost" id="qrSave">حفظ الصورة</button></div>
   <div class="row" style="margin-top:8px"><button class="btn ghost sm" id="qrUrl">تغيير رابط التطبيق</button><button class="btn ghost sm" id="qrClose">إغلاق</button></div>
+  <button class="btn red sm full" style="margin-top:8px" id="qrRevoke">إلغاء كود السائق وإصدار كود جديد</button>
+  <div id="qrTopic" style="font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all;direction:ltr"></div>
 </div></div>
 
 <div class="modal" id="editModal"><div class="box" style="text-align:right;max-height:92vh;overflow:auto">
   <h2 style="margin:0 0 6px;font-size:17px">تعديل النقلة</h2>
-  <div class="row"><div><label class="f">التاريخ</label><input type="date" id="eDate"></div><div><label class="f">ملاحظة</label><input type="text" id="eNote"></div></div>
+  <div class="row"><div><label class="f">التاريخ</label><input type="date" id="eDate"></div><div><label class="f">العربية</label><input type="text" id="eCar" list="carList"></div></div>
+  <label class="f">ملاحظة</label><input type="text" id="eNote">
   <div class="row"><div><label class="f">قراءة العداد</label><input type="number" inputmode="decimal" id="eOdo"></div><div><label class="f">لترات</label><input type="number" inputmode="decimal" id="eLiters"></div></div>
   <label class="f">مبلغ التفويلة</label><input type="number" inputmode="decimal" id="eFuelAmt">
   <label style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:15px"><input type="checkbox" id="eDeduct"> تخصم التفويلة من العهدة</label>
-  <label class="f">المصاريف (سطر لكل بند: الاسم: المبلغ)</label><textarea class="in" id="eItems" style="width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);font:inherit;background:var(--bg);color:var(--ink)"></textarea>
+  <label class="f">المصاريف (سطر لكل بند: التصنيف: المبلغ)</label><textarea id="eItems" style="min-height:90px"></textarea>
   <div class="row" style="margin-top:12px"><button class="btn" id="eSave">حفظ التعديل</button><button class="btn ghost" id="eCancel">إلغاء</button></div>
 </div></div>
 
 <div class="viewer" id="viewer"><img alt=""></div>
 <div class="toast" id="toast"></div>
+<div id="printArea"></div>
 
 <script>
-/* ---------- IndexedDB ---------- */
-const DB_NAME='driver-daily', STORES=['drivers','custody','trips'];
+/* ================= IndexedDB ================= */
+const DB_NAME='driver-daily', STORES=['drivers','custody','trips','cars','closings'];
 let db;
 function openDB(){return new Promise((res,rej)=>{
-  const r=indexedDB.open(DB_NAME,1);
-  r.onupgradeneeded=()=>{STORES.forEach(s=>r.result.createObjectStore(s,{keyPath:'id'}))};
+  const r=indexedDB.open(DB_NAME,2);
+  r.onupgradeneeded=()=>{STORES.forEach(s=>{if(!r.result.objectStoreNames.contains(s))r.result.createObjectStore(s,{keyPath:'id'})})};
   r.onsuccess=()=>{db=r.result;res()};r.onerror=()=>rej(r.error);
 })}
 const all=s=>new Promise((res,rej)=>{const q=db.transaction(s).objectStore(s).getAll();q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)});
@@ -181,16 +232,61 @@ const put=(s,v)=>new Promise((res,rej)=>{const t=db.transaction(s,'readwrite');t
 const del=(s,id)=>new Promise((res,rej)=>{const t=db.transaction(s,'readwrite');t.objectStore(s).delete(id);t.oncomplete=res;t.onerror=()=>rej(t.error)});
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 
-/* ---------- helpers ---------- */
+/* ================= helpers ================= */
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const n=v=>parseFloat(v)||0;
+const n=v=>parseFloat(String(v??'').replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[٫،]/g,'.'))||0;
 const fmt=v=>new Intl.NumberFormat('ar-EG',{maximumFractionDigits:2}).format(v);
 const today=()=>new Date().toISOString().slice(0,10);
 const dfmt=d=>new Date(d+'T00:00:00').toLocaleDateString('ar-EG',{day:'numeric',month:'long',year:'numeric'});
-function toast(m,ms=2200){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display='none',ms)}
-const camSvg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+const tsfmt=t=>new Date(t).toLocaleDateString('ar-EG',{day:'numeric',month:'long'});
+function toast(m,ms=2600){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display='none',ms)}
+const b64=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb64=s=>JSON.parse(decodeURIComponent(escape(atob(s.replace(/-/g,'+').replace(/_/g,'/')))));
+const blobToData=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
+const download=(blob,name)=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click()};
 
+/* ================= settings ================= */
+const DEFAULT_CATS=['تلج','حمولة','ميزان','محافظة','إكرامية','غسيل','إصلاح','أخرى'];
+function cats(){let c;try{c=JSON.parse(localStorage.getItem('cats'))}catch(e){}
+  if(!Array.isArray(c)||!c.length)c=DEFAULT_CATS.slice();
+  c=c.filter(x=>x&&x!=='أخرى');c.push('أخرى');return c}
+const S={
+  get thr(){return n(localStorage.getItem('thr'))||20},
+  get maxKm(){return n(localStorage.getItem('maxKm'))||1500},
+  get lowCust(){const v=localStorage.getItem('lowCust');return v===null||v===''?500:n(v)},
+  get showBal(){return localStorage.getItem('showBal')==='1'},
+  get notify(){return localStorage.getItem('notify')!=='0'},
+  get priceThr(){return n(localStorage.getItem('priceThr'))||50},
+  get idleDays(){const v=localStorage.getItem('idleDays');return v===null||v===''?2:n(v)},
+  get ntfyUrl(){return (localStorage.getItem('ntfyUrl')||'https://ntfy.sh').replace(/\/+$/,'')}
+};
+
+/* ================= state ================= */
+let drivers=[],custody=[],trips=[],cars=[],closings=[];
+let cur=localStorage.getItem('curDriver')||'';
+const MODE=localStorage.getItem('mode')||'admin';
+document.body.dataset.mode=MODE;
+const photos={odo:null,fuel:null,exp:null};
+const LBL={odo:'العداد',fuel:'التفويلة',exp:'المصاريف'};
+let items=[{cat:'',name:'',amount:''}];
+const approved=()=>trips.filter(t=>t.status!=='pending');
+
+async function load(){
+  [drivers,custody,trips,cars,closings]=await Promise.all(STORES.map(all));
+  if(!drivers.find(d=>d.id===cur)) cur=drivers[0]?.id||'';
+  if(MODE==='driver'&&!cur){
+    const nm=prompt('اكتب اسمك');
+    if(nm&&nm.trim()){const d={id:uid(),name:nm.trim()};await put('drivers',d);drivers.push(d);cur=d.id;localStorage.setItem('curDriver',cur)}
+  }
+  renderAll();
+}
+function renderAll(){
+  _ps=null;renderDrivers();renderDash();renderLog();renderCons();renderCust();renderMore();renderSent();renderCarList();
+  if(MODE==='admin')schedulePublish();
+}
+
+/* ================= photos: shrink, exif, hash, OCR ================= */
 function shrink(file,max=1280,q=.72){return new Promise((res,rej)=>{
   const img=new Image(),u=URL.createObjectURL(file);
   img.onload=()=>{
@@ -201,286 +297,193 @@ function shrink(file,max=1280,q=.72){return new Promise((res,rej)=>{
   };
   img.onerror=()=>rej(new Error('bad image'));img.src=u;
 })}
-
-/* ---------- state ---------- */
-let drivers=[],custody=[],trips=[];
-let cur=localStorage.getItem('curDriver')||'';
-const MODE=localStorage.getItem('mode')||'admin';
-document.body.dataset.mode=MODE;
-const photos={odo:null,fuel:null,exp:null};
-let items=[{name:'',amount:''}];
-
-async function load(){
-  [drivers,custody,trips]=await Promise.all(STORES.map(all));
-  if(!drivers.find(d=>d.id===cur)) cur=drivers[0]?.id||'';
-  if(MODE==='driver'&&!cur){
-    const nm=prompt('اكتب اسمك');
-    if(nm&&nm.trim()){const d={id:uid(),name:nm.trim()};await put('drivers',d);drivers.push(d);cur=d.id;localStorage.setItem('curDriver',cur)}
-  }
-  renderAll();
+function quality(c){
+  const k=Math.min(1,480/c.width),w=Math.max(8,Math.round(c.width*k)),h=Math.max(8,Math.round(c.height*k));
+  const t=document.createElement('canvas');t.width=w;t.height=h;const x=t.getContext('2d');x.drawImage(c,0,0,w,h);
+  const d=x.getImageData(0,0,w,h).data,g=new Float32Array(w*h);let sum=0;
+  for(let i=0;i<w*h;i++){g[i]=d[i*4]*.299+d[i*4+1]*.587+d[i*4+2]*.114;sum+=g[i]}
+  const mean=sum/(w*h);let m=0,m2=0,cnt=0;
+  for(let y=1;y<h-1;y++)for(let x2=1;x2<w-1;x2++){const i=y*w+x2,l=g[i-1]+g[i+1]+g[i-w]+g[i+w]-4*g[i];m+=l;m2+=l*l;cnt++}
+  const v=m2/cnt-(m/cnt)*(m/cnt);
+  return {blur:Math.round(v),bright:Math.round(mean),warn:mean<40?'dark':(v<50?'blur':(mean>248?'bright':null))};
 }
-function renderAll(){renderDrivers();renderLog();renderCons();renderCust();renderSent();}
+const QMSG={blur:'⚠ الصورة تبدو مهزوزة — الأفضل تعيد التصوير',dark:'⚠ الصورة مضلمة — صوّر في إضاءة أفضل',bright:'⚠ الإضاءة قوية جدًا — الأرقام ممكن ما تبانش'};
+const QFLAG={blur:'غير واضحة (مهزوزة)',dark:'مضلمة',bright:'مضيئة جدًا'};
+function processPhoto(file,lines,max=1280,q=.72){return new Promise((res,rej)=>{
+  const img=new Image(),u=URL.createObjectURL(file);
+  img.onload=()=>{
+    const k=Math.min(1,max/Math.max(img.width,img.height));
+    const w=Math.round(img.width*k),h=Math.round(img.height*k);
+    const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.drawImage(img,0,0,w,h);URL.revokeObjectURL(u);const qual=quality(c);
+    c.toBlob(raw=>{
+      if(!lines||!lines.length)return res({blob:raw,raw,q:qual});
+      const fs=Math.max(15,Math.round(w/44)),pad=Math.round(fs*.5),bh=Math.round(lines.length*fs*1.35+pad);
+      x.fillStyle='rgba(0,0,0,.62)';x.fillRect(0,h-bh,w,bh);
+      x.fillStyle='#fff';x.font='bold '+fs+'px Tahoma,sans-serif';x.direction='rtl';x.textAlign='right';x.textBaseline='top';
+      lines.forEach((l,i)=>x.fillText(l,w-pad,h-bh+pad*.6+i*fs*1.35));
+      c.toBlob(b=>res({blob:b,raw,q:qual}),'image/jpeg',q);
+    },'image/jpeg',q);
+  };
+  img.onerror=()=>rej(new Error('bad image'));img.src=u;
+})}
+let lastLoc=null;
+function getLoc(){return new Promise(res=>{
+  if(lastLoc&&Date.now()-lastLoc.t<120000)return res(lastLoc);
+  if(!navigator.geolocation)return res(null);
+  navigator.geolocation.getCurrentPosition(p=>{lastLoc={lat:p.coords.latitude,lng:p.coords.longitude,acc:Math.round(p.coords.accuracy),t:Date.now()};res(lastLoc)},()=>res(null),{timeout:8000,maximumAge:60000});
+})}
+const stampTime=ts=>{const d=new Date(ts),p=x=>String(x).padStart(2,'0');return `${d.getFullYear()}/${p(d.getMonth()+1)}/${p(d.getDate())}  ${p(d.getHours())}:${p(d.getMinutes())}`};
+function exifTime(buf){
+  try{
+    const v=new DataView(buf);if(v.getUint16(0)!==0xFFD8)return null;
+    let o=2;
+    while(o<v.byteLength-4){
+      const m=v.getUint16(o);o+=2;
+      if(m===0xFFE1){
+        if(v.getUint32(o+2)===0x45786966){
+          const t=o+8,le=v.getUint16(t)===0x4949;
+          const g16=p=>v.getUint16(p,le),g32=p=>v.getUint32(p,le);
+          const find=(p,want)=>{const c=g16(p);for(let i=0;i<c;i++){const e=p+2+i*12;if(g16(e)===want)return e}return null};
+          const str=e=>{const cnt=g32(e+4),off=cnt>4?t+g32(e+8):e+8;let s='';for(let i=0;i<cnt-1;i++)s+=String.fromCharCode(v.getUint8(off+i));return s};
+          const ifd0=t+g32(t+4);let e=null;const ex=find(ifd0,0x8769);
+          if(ex)e=find(t+g32(ex+8),0x9003);
+          if(!e)e=find(ifd0,0x0132);
+          if(e){const m2=str(e).match(/(\d{4}):(\d\d):(\d\d) (\d\d):(\d\d):(\d\d)/);if(m2)return new Date(+m2[1],m2[2]-1,+m2[3],+m2[4],+m2[5],+m2[6]).getTime()}
+        }
+        return null;
+      }
+      if((m&0xFF00)!==0xFF00)break;
+      o+=v.getUint16(o);
+    }
+  }catch(e){}
+  return null;
+}
+function imgHash(b){return new Promise(r=>{
+  const im=new Image(),u=URL.createObjectURL(b);
+  im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=16;const x=c.getContext('2d');x.drawImage(im,0,0,im.width,Math.round(im.height*0.82),0,0,16,16);
+    const d=x.getImageData(0,0,16,16).data,g=[];let s=0;
+    for(let i=0;i<256;i++){const v=d[i*4]*.3+d[i*4+1]*.59+d[i*4+2]*.11;g.push(v);s+=v}
+    const a=s/256;URL.revokeObjectURL(u);r(g.map(v=>v>a?'1':'0').join(''))};
+  im.onerror=()=>r('');im.src=u;
+})}
+const dist=(a,b,max=6)=>{if(!a||!b||a.length!==b.length)return 999;let d=0;for(let i=0;i<a.length;i++)if(a[i]!==b[i]&&++d>max)return 999;return d};
+let tessP=null,tessW=null;
+function loadTess(){return tessP||(tessP=new Promise((res,rej)=>{
+  if(window.Tesseract)return res();
+  const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+  s.onload=res;s.onerror=()=>{tessP=null;rej()};document.head.appendChild(s);
+}))}
+async function ocrNums(blob){
+  if(!navigator.onLine)return null;
+  try{
+    await loadTess();
+    if(!tessW){tessW=await Tesseract.createWorker('eng');await tessW.setParameters({tessedit_char_whitelist:'0123456789.',tessedit_pageseg_mode:'11'})}
+    const {data}=await tessW.recognize(blob);
+    return [...new Set((data.text.match(/\d+(?:\.\d+)?/g)||[]).filter(x=>x.replace('.','').length>=2))].slice(0,6);
+  }catch(e){return null}
+}
+const ocrTarget={odo:'odo',fuel:'liters'};
+function showOcr(key){
+  const el=$('ocr-'+key);if(!el)return;const p=photos[key];
+  if(!p){el.innerHTML='';return}
+  if(p.ocr===undefined){el.textContent='جارِ قراءة الأرقام من الصورة…';return}
+  if(!p.ocr||!p.ocr.length){el.textContent='';return}
+  el.innerHTML='أرقام مقروءة من الصورة (اضغط لاستخدام الرقم): '+p.ocr.map(x=>`<button type="button" class="chip" data-fill="${ocrTarget[key]}" data-v="${esc(x)}">${esc(x)}</button>`).join('');
+}
+function setupPhoto(key){
+  const box=$('ph-'+key);
+  const lab={odo:'صوّر أو اختر صورة عداد العربية',fuel:'صوّر أو اختر صورة عداد التفويلة',exp:'صوّر أو اختر صورة ورقة المصاريف'}[key];
+  box.innerHTML='<div class="pv"></div><div class="qw"></div><div class="pb"><button type="button" class="btn sm" data-src="cam">📷 كاميرا</button><button type="button" class="btn ghost sm" data-src="gal">🖼 من المعرض</button></div><input type="file" accept="image/*" capture="environment" hidden data-in="cam"><input type="file" accept="image/*" hidden data-in="gal">';
+  const pv=box.querySelector('.pv');
+  const qw=box.querySelector('.qw');
+  const reset=()=>{pv.innerHTML='<span>'+lab+'</span>';photos[key]=null;qw.textContent='';showOcr(key)};
+  reset();box._reset=reset;
+  box.querySelectorAll('[data-src]').forEach(bt=>bt.onclick=()=>{if(MODE==='driver')getLoc();box.querySelector('[data-in="'+bt.dataset.src+'"]').click()});
+  box.querySelectorAll('input[type=file]').forEach(inp=>inp.onchange=async()=>{
+    const f=inp.files[0];if(!f)return;
+    try{
+      const exif=exifTime(await f.arrayBuffer());
+      const ts=exif||f.lastModified||Date.now();
+      let lines=null,loc=null;
+      if(MODE==='driver'){
+        loc=await getLoc();
+        lines=['\u2066'+stampTime(ts)+'\u2069  •  '+drvName(cur)+(exif?'':' (تاريخ الملف)'),loc?`📍 \u2066${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)}\u2069  (دقة ${loc.acc} م)`:'📍 الموقع غير متاح'];
+      }
+      const {blob,raw,q}=await processPhoto(f,lines);const hash=await imgHash(blob);
+      const p=photos[key]={blob,hash,exif:MODE==='driver'?ts:exif,loc:loc?{lat:+loc.lat.toFixed(6),lng:+loc.lng.toFixed(6),acc:loc.acc}:null,q,ocr:undefined};
+      qw.textContent=q.warn?QMSG[q.warn]:'';
+      pv.innerHTML='';const im=document.createElement('img');im.src=URL.createObjectURL(blob);pv.appendChild(im);
+      if(ocrTarget[key]){showOcr(key);ocrNums(raw).then(r=>{if(photos[key]===p){p.ocr=r;showOcr(key)}})}
+    }catch(e){toast('تعذر قراءة الصورة')}
+    inp.value='';
+  });
+}
+['odo','fuel','exp'].forEach(setupPhoto);
+document.addEventListener('click',e=>{const t=e.target;if(t.dataset&&t.dataset.fill){$(t.dataset.fill).value=t.dataset.v}});
 
-/* ---------- drivers ---------- */
+/* ================= drivers ================= */
 function renderDrivers(){
   const s=$('driverSel');
   s.innerHTML=drivers.length?drivers.map(d=>`<option value="${d.id}" ${d.id===cur?'selected':''}>${esc(d.name)}</option>`).join(''):'<option value="">أضف سائقًا أولًا</option>';
 }
-$('driverSel').onchange=e=>{cur=e.target.value;localStorage.setItem('curDriver',cur);renderLog();renderCons();renderCust()};
+$('driverSel').onchange=e=>{cur=e.target.value;localStorage.setItem('curDriver',cur);renderAll()};
 $('addDriver').onclick=async()=>{
   const name=prompt('اسم السائق');
   if(!name||!name.trim())return;
   const d={id:uid(),name:name.trim()};
   await put('drivers',d);drivers.push(d);cur=d.id;localStorage.setItem('curDriver',cur);renderAll();toast('تمت إضافة السائق');
 };
+const drvName=id=>(drivers.find(d=>d.id===id)||{}).name||'';
 
-/* ---------- photo boxes (camera or gallery) ---------- */
-const labels={odo:'صوّر أو اختر صورة عداد العربية',fuel:'صوّر أو اختر صورة عداد التفويلة',exp:'صوّر أو اختر صورة ورقة المصاريف'};
-function setupPhoto(key){
-  const box=$('ph-'+key);
-  box.innerHTML='<div class="pv"></div><div class="pb"><button type="button" class="btn sm" data-src="cam">📷 كاميرا</button><button type="button" class="btn ghost sm" data-src="gal">🖼 من المعرض</button></div><input type="file" accept="image/*" capture="environment" hidden data-in="cam"><input type="file" accept="image/*" hidden data-in="gal">';
-  const pv=box.querySelector('.pv');
-  const reset=()=>{pv.innerHTML='<span>'+labels[key]+'</span>'};
-  reset();box._reset=reset;
-  box.querySelectorAll('[data-src]').forEach(bt=>bt.onclick=()=>box.querySelector('[data-in="'+bt.dataset.src+'"]').click());
-  box.querySelectorAll('input[type=file]').forEach(inp=>inp.onchange=async()=>{
-    const f=inp.files[0];if(!f)return;
-    try{
-      const bl=await shrink(f);photos[key]=bl;
-      pv.innerHTML='';const im=document.createElement('img');im.src=URL.createObjectURL(bl);pv.appendChild(im);
-    }catch(e){toast('تعذر قراءة الصورة')}
-    inp.value='';
-  });
+/* ================= cars ================= */
+function carNames(){
+  const a=cars.map(c=>c.name);
+  if(MODE==='driver'){try{JSON.parse(localStorage.getItem('cfgCars')||'[]').forEach(x=>{if(!a.includes(x))a.push(x)})}catch(e){}const l=localStorage.getItem('lastCar');if(l&&!a.includes(l))a.push(l)}
+  return a;
 }
-['odo','fuel','exp'].forEach(setupPhoto);
+function renderCarList(){$('carList').innerHTML=carNames().map(x=>`<option value="${esc(x)}">`).join('')}
+async function ensureCar(name){
+  name=(name||'').trim();if(!name)return '';
+  let c=cars.find(x=>x.name===name);
+  if(!c){c={id:uid(),name,expected:''};await put('cars',c);cars.push(c)}
+  return c.id;
+}
+const carName=t=>t.carName||(cars.find(c=>c.id===t.carId)||{}).name||'';
 
-/* ---------- expense items ---------- */
+/* ================= expense items ================= */
+const itemLabel=i=>i.cat==='أخرى'||!i.cat?(i.name||'أخرى'):i.cat+(i.name?' ('+i.name+')':'');
 function renderItems(){
-  $('items').innerHTML=items.map((it,i)=>`<div class="it">
-    <input type="text" placeholder="البند (تلج، حمولة…)" value="${esc(it.name)}" data-i="${i}" data-k="name">
+  const cl=cats();
+  $('items').innerHTML=items.map((it,i)=>`<div class="itw"><div class="it">
+    <select data-i="${i}" data-k="cat" aria-label="التصنيف"><option value="">التصنيف…</option>${cl.map(c=>`<option ${c===it.cat?'selected':''}>${esc(c)}</option>`).join('')}</select>
     <input type="number" inputmode="decimal" placeholder="المبلغ" value="${esc(it.amount)}" data-i="${i}" data-k="amount">
-    <button class="btn ghost sm" data-rm="${i}" aria-label="حذف البند">✕</button></div>`).join('');
+    <button class="btn ghost sm" data-rm="${i}" aria-label="حذف البند" style="flex:0 0 auto">✕</button></div>
+    ${it.cat==='أخرى'?`<input type="text" class="nm" placeholder="اكتب نوع المصروف" value="${esc(it.name)}" data-i="${i}" data-k="name">`:''}</div>`).join('');
   calcExp();
 }
 function calcExp(){$('expTot').textContent=fmt(items.reduce((s,i)=>s+n(i.amount),0))}
-$('items').addEventListener('input',e=>{const t=e.target;if(t.dataset.i!==undefined){items[t.dataset.i][t.dataset.k]=t.value;calcExp()}});
-$('items').addEventListener('click',e=>{const r=e.target.dataset.rm;if(r!==undefined){items.splice(r,1);if(!items.length)items=[{name:'',amount:''}];renderItems()}});
-$('addItem').onclick=()=>{items.push({name:'',amount:''});renderItems();$('items').lastElementChild.querySelector('input').focus()};
-
-/* ---------- save trip ---------- */
-$('saveTrip').onclick=async()=>{
-  if(!cur){toast('اختر سائقًا أو أضف سائقًا جديدًا');return}
-  const clean=items.filter(i=>i.name.trim()||n(i.amount));
-  const t={
-    id:uid(),driverId:cur,date:$('tDate').value||today(),note:$('tNote').value.trim(),
-    odo:$('odo').value,odoImg:photos.odo,
-    liters:$('liters').value,fuelAmt:$('fuelAmt').value,fuelDeduct:$('fuelDeduct').checked,fuelImg:photos.fuel,
-    expImg:photos.exp,items:clean,status:MODE==='driver'?'sent':'approved'
-  };
-  if(!t.odoImg&&!t.fuelImg&&!t.expImg&&!clean.length&&!t.odo){toast('أضف صورة أو بيانات أولًا');return}
-  await put('trips',t);trips.push(t);
-  resetForm();
-  if(MODE==='driver'){renderSent();await sendTrip(t);scrollTo(0,document.body.scrollHeight);return}
-  renderLog();renderCust();renderCons();
-  const r=consumption(cur).find(x=>x.id===t.id);
-  if(r&&flagged(r.status))toast('تم الحفظ — '+STAT[r.status][0],5000);else toast('تم حفظ النقلة وخصمها من العهدة');
-  show('log');
+$('items').addEventListener('input',e=>{const t=e.target;if(t.dataset.i!==undefined&&t.tagName!=='SELECT'){items[t.dataset.i][t.dataset.k]=t.value;calcExp()}});
+$('items').addEventListener('change',e=>{const t=e.target;if(t.tagName==='SELECT'){items[t.dataset.i].cat=t.value;renderItems()}});
+$('items').addEventListener('click',e=>{const r=e.target.dataset.rm;if(r!==undefined){items.splice(r,1);if(!items.length)items=[{cat:'',name:'',amount:''}];renderItems()}});
+$('addItem').onclick=()=>{items.push({cat:'',name:'',amount:''});renderItems()};
+$('copyLast').onclick=()=>{
+  const ts=trips.filter(t=>t.driverId===cur&&t.id!==addTo).sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
+  for(const t of ts){
+    const it=(t.items&&t.items.length)?t.items:((t.expAdd&&t.expAdd.items)||[]);
+    if(it.length){items=it.map(i=>({cat:i.cat||'',name:i.name||'',amount:i.amount}));renderItems();toast('تم نسخ مصاريف نقلة '+dfmt(t.date)+' — عدّل المبالغ لو اتغيّرت',4000);return}
+  }
+  toast('لا توجد نقلة سابقة فيها مصاريف');
 };
-function resetForm(){
-  ['odo','liters','fuelAmt','tNote'].forEach(i=>$(i).value='');
-  $('fuelDeduct').checked=false;$('tDate').value=today();
-  photos.odo=photos.fuel=photos.exp=null;['odo','fuel','exp'].forEach(k=>$('ph-'+k)._reset());
-  items=[{name:'',amount:''}];renderItems();
-}
 
-/* ---------- accounting ---------- */
-function tripCost(t){return (t.items||[]).reduce((s,i)=>s+n(i.amount),0)+(t.fuelDeduct?n(t.fuelAmt):0)}
+/* ================= accounting ================= */
+const tripCost=t=>(t.items||[]).reduce((s,i)=>s+n(i.amount),0)+(t.fuelDeduct?n(t.fuelAmt):0);
 function account(did){
-  const c=custody.filter(x=>x.driverId===did).reduce((s,x)=>s+n(x.amount),0);
-  const e=trips.filter(x=>x.driverId===did&&x.status!=='pending').reduce((s,x)=>s+tripCost(x),0);
+  const c=custody.filter(x=>x.driverId===did&&!x.closed).reduce((s,x)=>s+n(x.amount),0);
+  const e=approved().filter(x=>x.driverId===did&&!x.closed).reduce((s,x)=>s+tripCost(x),0);
   return {c,e,b:c-e};
 }
 
-/* ---------- log ---------- */
-const urls=new Map();
-function url(b){if(!b)return'';if(!urls.has(b))urls.set(b,URL.createObjectURL(b));return urls.get(b)}
-function tripCard(t,cm){
-  const pend=t.status==='pending',d=drivers.find(x=>x.id===t.driverId),c=cm[t.id];
-  const acts=pend
-    ?`<button class="btn sm" data-act="approve" data-id="${t.id}">اعتماد</button><button class="btn ghost sm" data-act="edit" data-id="${t.id}">تعديل</button><button class="btn red sm" data-act="del" data-id="${t.id}">رفض</button>`
-    :`<button class="btn ghost sm" data-act="edit" data-id="${t.id}">تعديل</button><button class="btn ghost sm" data-act="del" data-id="${t.id}">حذف</button>`;
-  return `<div class="card trip ${pend?'pend':''}">
-    <div class="top"><div><b>${dfmt(t.date)}</b>${pend?` <span class="badge">${esc(d?d.name:'')} — بانتظار الاعتماد</span>`:''}${t.note?`<div style="color:var(--muted);font-size:14px">${esc(t.note)}</div>`:''}</div></div>
-    <div style="margin-top:8px;font-size:15px;line-height:1.9">
-      ${t.odo?`العداد: <b>${fmt(n(t.odo))}</b> كم<br>`:''}
-      ${t.liters||t.fuelAmt?`التفويلة: <b>${fmt(n(t.liters))}</b> لتر${t.fuelAmt?` — ${fmt(n(t.fuelAmt))}${t.fuelDeduct?' (من العهدة)':''}`:''}<br>`:''}
-      ${(t.items||[]).map(i=>`${esc(i.name)||'بند'}: ${fmt(n(i.amount))}`).join(' • ')}
-    </div>
-    ${c&&c.status!=='none'?`<div style="margin-top:6px">${badge(c)}</div>`:''}
-    <div class="tot"><span>${pend?'سيُخصم من العهدة عند الاعتماد':'المخصوم من العهدة'}</span><span>${fmt(tripCost(t))}</span></div>
-    <div class="thumbs">${[['odoImg','العداد'],['fuelImg','التفويلة'],['expImg','المصاريف']].map(([k,l])=>t[k]?`<div><img src="${url(t[k])}" data-zoom alt="${l}"><span>${l}</span></div>`:'<div></div>').join('')}</div>
-    <div class="row" style="margin-top:10px">${acts}</div>
-  </div>`;
-}
-function renderLog(){
-  const v=$('v-log');
-  const sortF=(a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id);
-  const imp='<div class="card"><label class="btn amber" style="display:block;text-align:center;cursor:pointer">استيراد نقلات من السائقين<input type="file" id="impFile" multiple hidden></label><div style="color:var(--muted);font-size:13px;margin-top:6px">افتح ملف النقلة اللي السائق بعتهولك على واتساب، وهتظهر هنا بانتظار اعتمادك.</div></div>';
-  const pend=trips.filter(t=>t.status==='pending').sort(sortF);
-  const pendHtml=pend.length?`<h2 style="font-size:16px;margin:4px 2px 8px">بانتظار اعتمادك (${pend.length})</h2>`+pend.map(t=>tripCard(t,{})).join(''):'';
-  if(!cur){v.innerHTML=imp+pendHtml+'<div class="empty">أضف سائقًا لتبدأ</div>';return}
-  const cm={};consumption(cur).forEach(r=>cm[r.id]=r);
-  const rows=Object.values(cm),lastRow=rows[rows.length-1];
-  const list=trips.filter(t=>t.driverId===cur&&t.status!=='pending').sort(sortF);
-  const a=account(cur);
-  v.innerHTML=imp+pendHtml+(lastRow&&flagged(lastRow.status)?`<div class="alert">${STAT[lastRow.status][0]} في آخر نقلة — راجع تبويب الاستهلاك</div>`:'')+`<div class="card"><div class="bal">
-    <div><small>العهدة</small><b>${fmt(a.c)}</b></div>
-    <div><small>المصاريف</small><b>${fmt(a.e)}</b></div>
-    <div><small>المتبقي</small><b class="${a.b<0?'neg':'pos'}">${fmt(a.b)}</b></div></div></div>`+
-  (list.length?list.map(t=>tripCard(t,cm)).join(''):'<div class="empty">لا توجد نقلات معتمدة بعد</div>');
-}
-$('v-log').addEventListener('click',async e=>{
-  const t=e.target;
-  if(t.dataset.zoom!==undefined){$('viewer').firstElementChild.src=t.src;$('viewer').style.display='flex';return}
-  const act=t.dataset.act,id=t.dataset.id;if(!act)return;
-  const tr=trips.find(x=>x.id===id);if(!tr)return;
-  if(act==='approve'){tr.status='approved';await put('trips',tr);renderAll();toast('تم الاعتماد وخصم المصاريف من العهدة')}
-  else if(act==='edit')openEdit(tr);
-  else if(act==='del'){
-    const msg=tr.status==='pending'?'رفض هذه النقلة وحذفها؟':'حذف هذه النقلة؟ ستعود قيمتها إلى العهدة.';
-    if(confirm(msg)){await del('trips',id);trips=trips.filter(x=>x.id!==id);renderAll()}
-  }
-});
-$('v-log').addEventListener('change',e=>{if(e.target.id==='impFile'){importFiles([...e.target.files]);e.target.value=''}});
-
-/* ---------- edit trip (admin) ---------- */
-let editing=null;
-function openEdit(t){
-  editing=t;
-  $('eDate').value=t.date;$('eNote').value=t.note||'';$('eOdo').value=t.odo||'';$('eLiters').value=t.liters||'';
-  $('eFuelAmt').value=t.fuelAmt||'';$('eDeduct').checked=!!t.fuelDeduct;
-  $('eItems').value=(t.items||[]).map(i=>`${i.name}: ${i.amount}`).join('\n');
-  $('editModal').style.display='flex';
-}
-$('eCancel').onclick=()=>{$('editModal').style.display='none';editing=null};
-$('eSave').onclick=async()=>{
-  const t=editing;if(!t)return;
-  const ar=x=>x.replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[٫،]/g,'.');
-  t.date=$('eDate').value||t.date;t.note=$('eNote').value.trim();t.odo=$('eOdo').value;t.liters=$('eLiters').value;
-  t.fuelAmt=$('eFuelAmt').value;t.fuelDeduct=$('eDeduct').checked;
-  t.items=$('eItems').value.split('\n').map(l=>ar(l).trim()).filter(Boolean).map(l=>{
-    const m=l.match(/^(.*?)[\s:：\-]*(\d+(?:\.\d+)?)\s*$/);
-    return m?{name:m[1].trim(),amount:m[2]}:{name:l,amount:''};
-  });
-  await put('trips',t);$('editModal').style.display='none';editing=null;renderAll();toast('تم حفظ التعديل');
-};
-
-/* ---------- driver -> admin transfer ---------- */
-const blobToData=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
-async function packet(t){
-  const d=drivers.find(x=>x.id===t.driverId);
-  return JSON.stringify({v:1,app:'yomia',trip:{
-    id:t.id,driverName:d?d.name:'',date:t.date,note:t.note,odo:t.odo,liters:t.liters,items:t.items,
-    imgs:{odo:t.odoImg?await blobToData(t.odoImg):null,fuel:t.fuelImg?await blobToData(t.fuelImg):null,exp:t.expImg?await blobToData(t.expImg):null}
-  }});
-}
-async function sendTrip(t){
-  const d=drivers.find(x=>x.id===t.driverId);
-  const body=await packet(t);
-  const file=new File([body],'trip-'+t.date+'-'+t.id+'.txt',{type:'text/plain'});
-  const text='نقلة السائق '+(d?d.name:'')+' بتاريخ '+t.date+' (افتح الملف داخل التطبيق: استيراد)';
-  try{
-    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});toast('اختر المدير من القائمة لإرسال النقلة');return}
-  }catch(e){if(e.name==='AbortError'){toast('لم يتم الإرسال — اضغط إعادة الإرسال من القائمة');return}}
-  const a=document.createElement('a');a.href=URL.createObjectURL(file);a.download=file.name;a.click();
-  toast('تم حفظ ملف النقلة — أرسله للمدير على واتساب',5000);
-}
-function renderSent(){
-  const el=$('v-sent');if(MODE!=='driver')return;
-  $('drvName').textContent=(drivers.find(x=>x.id===cur)||{}).name||'';
-  const list=trips.filter(t=>t.driverId===cur).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id)).slice(0,15);
-  el.innerHTML=list.length?'<div class="card lst"><h2>نقلاتي المُرسلة</h2>'+list.map(t=>`<div class="r"><span>${dfmt(t.date)}${t.odo?' — '+fmt(n(t.odo))+' كم':''}</span><button class="btn ghost sm" data-resend="${t.id}">إعادة الإرسال</button></div>`).join('')+'</div>':'';
-  $('adminLink').innerHTML=localStorage.getItem('pin')?'<button class="btn ghost sm" id="goAdmin">دخول المدير</button>':'';
-}
-$('v-sent').addEventListener('click',e=>{const id=e.target.dataset.resend;if(id){const t=trips.find(x=>x.id===id);if(t)sendTrip(t)}});
-$('adminLink').addEventListener('click',e=>{
-  if(e.target.id==='goAdmin'){const p=prompt('رمز المدير');if(p&&p===localStorage.getItem('pin')){localStorage.setItem('mode','admin');location.reload()}else if(p)toast('الرمز غير صحيح')}
-});
-async function importFiles(files){
-  let ok=0,dup=0,bad=0;
-  for(const f of files){
-    try{
-      const j=JSON.parse(await f.text());
-      if(j.app!=='yomia'||!j.trip)throw 0;
-      const p=j.trip;
-      if(trips.some(x=>x.id===p.id)){dup++;continue}
-      let d=drivers.find(x=>x.name===p.driverName);
-      if(!d){d={id:uid(),name:p.driverName||'سائق'};await put('drivers',d);drivers.push(d)}
-      const bl=async u=>u?await (await fetch(u)).blob():null;
-      const t={id:p.id,driverId:d.id,date:p.date,note:p.note||'',odo:p.odo||'',liters:p.liters||'',fuelAmt:'',fuelDeduct:false,
-        items:p.items||[],odoImg:await bl(p.imgs&&p.imgs.odo),fuelImg:await bl(p.imgs&&p.imgs.fuel),expImg:await bl(p.imgs&&p.imgs.exp),status:'pending'};
-      await put('trips',t);trips.push(t);ok++;
-      if(!cur)cur=d.id;
-    }catch(e){bad++}
-  }
-  renderAll();
-  toast(`تم استيراد ${ok}`+(dup?` • مكرر ${dup}`:'')+(bad?` • ملف غير صالح ${bad}`:''),4000);
-}
-
-$('viewer').onclick=()=>$('viewer').style.display='none';
-
-/* ---------- custody ---------- */
-function renderCust(){
-  const v=$('v-cust');
-  if(!cur){v.innerHTML='<div class="empty">أضف سائقًا لتبدأ</div>';return}
-  const a=account(cur),d=drivers.find(x=>x.id===cur);
-  const list=custody.filter(x=>x.driverId===cur).sort((a,b)=>b.date.localeCompare(a.date));
-  v.innerHTML=`<div class="card"><h2>عهدة ${esc(d.name)}</h2><div class="bal">
-    <div><small>إجمالي العهدة</small><b>${fmt(a.c)}</b></div>
-    <div><small>المصاريف</small><b>${fmt(a.e)}</b></div>
-    <div><small>المتبقي</small><b class="${a.b<0?'neg':'pos'}">${fmt(a.b)}</b></div></div>
-    <button class="btn amber" style="width:100%;margin-top:12px" id="shareAcc">إرسال كشف الحساب واتساب</button>
-    <button class="btn ghost" style="width:100%;margin-top:8px" id="showQR">كود QR للسائق</button></div>
-  <div class="card"><h2>إضافة عهدة</h2>
-    <div class="row"><div><input type="number" inputmode="decimal" id="cAmt" placeholder="المبلغ"></div><div><input type="date" id="cDate" value="${today()}"></div></div>
-    <input type="text" id="cNote" placeholder="ملاحظة (اختياري)" style="margin-top:8px">
-    <button class="btn" style="width:100%;margin-top:10px" id="addCust">إضافة العهدة</button></div>
-  <div class="card lst"><h2>سجل العهدة</h2>${list.length?list.map(x=>`<div class="r"><div><b>${fmt(n(x.amount))}</b> <span style="color:var(--muted);font-size:14px">${dfmt(x.date)}${x.note?' — '+esc(x.note):''}</span></div><button class="btn ghost sm" data-dc="${x.id}">حذف</button></div>`).join(''):'<div class="empty">لا توجد عهدة مسجلة</div>'}</div>
-  <div class="card"><h2>رمز المدير</h2><div class="row"><input type="text" inputmode="numeric" id="pinIn" placeholder="رمز للعودة لوضع المدير" value="${esc(localStorage.getItem('pin')||'')}"><button class="btn sm" id="savePin" style="flex:0 0 auto">حفظ</button></div></div>
-  <div class="card"><button class="btn ghost" style="width:100%" id="backup">نسخة احتياطية (بدون صور)</button></div>`;
-}
-$('v-cust').addEventListener('click',async e=>{
-  const t=e.target;
-  if(t.id==='addCust'){
-    const amt=n($('cAmt').value);if(!amt){toast('اكتب المبلغ');return}
-    const c={id:uid(),driverId:cur,amount:amt,date:$('cDate').value||today(),note:$('cNote').value.trim()};
-    await put('custody',c);custody.push(c);renderCust();renderLog();toast('تمت إضافة العهدة');
-  }else if(t.dataset.dc&&confirm('حذف هذه العهدة؟')){
-    await del('custody',t.dataset.dc);custody=custody.filter(x=>x.id!==t.dataset.dc);renderCust();renderLog();
-  }else if(t.id==='shareAcc'){
-    const d=drivers.find(x=>x.id===cur),a=account(cur);
-    const txt=`كشف حساب السائق: ${d.name}\nإجمالي العهدة: ${fmt(a.c)}\nإجمالي المصاريف: ${fmt(a.e)}\nالمتبقي: ${fmt(a.b)}`;
-    window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank');
-  }else if(t.id==='savePin'){const p=$('pinIn').value.trim();if(p)localStorage.setItem('pin',p);else localStorage.removeItem('pin');toast('تم حفظ الرمز')
-  }else if(t.id==='showQR'){openQR();
-  }else if(t.id==='backup'){
-    const blob=new Blob([JSON.stringify({drivers,custody,trips:trips.map(({odoImg,fuelImg,expImg,...r})=>r)},null,1)],{type:'application/json'});
-    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='yomia-backup-'+today()+'.json';a.click();
-  }
-});
-
-/* ---------- nav ---------- */
-function show(v){
-  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));if(v==='cons')renderCons();
-  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
-  scrollTo(0,0);
-}
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.v));
-
-
-/* ---------- consumption tracking ---------- */
-const thr=()=>n(localStorage.getItem('thr'))||20;
-const flagged=st=>['over','under','badodo','noodo'].includes(st);
+/* ================= consumption (per car) ================= */
 const STAT={
   over:['⚠ استهلاك أعلى من المعتاد','bad'],
   under:['⚠ استهلاك أقل من المعتاد (راجع القراءات)','bad'],
@@ -490,66 +493,847 @@ const STAT={
   watch:['قيد المتابعة (لا يوجد معدل للمقارنة بعد)',''],
   none:['أول قراءة — تبدأ المتابعة من النقلة التالية','']
 };
+const flagged=st=>['over','under','badodo','noodo'].includes(st);
 const median=a=>{const q=[...a].sort((x,y)=>x-y),m=q.length>>1;return q.length%2?q[m]:(q[m-1]+q[m])/2};
-function consumption(did){
-  const d=drivers.find(x=>x.id===did);
-  const ts=trips.filter(t=>t.driverId===did&&t.status!=='pending').sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
-  const out=[];let prev=null;
-  ts.forEach(t=>{
-    const odo=n(t.odo),L=n(t.liters),r={id:t.id,date:t.date,odo,liters:L,status:'none'};
-    if(odo>0){
-      if(prev!==null&&L>0){
-        r.km=odo-prev;
-        if(r.km<=0)r.status='badodo';else{r.kmpl=r.km/L;r.l100=L/r.km*100;r.status='calc'}
-      }
-      if(prev===null||odo>prev)prev=odo;
-    }else if(L>0)r.status='noodo';
-    out.push(r);
+const hav=(a,b)=>{const r=x=>x*Math.PI/180,dl=r(b.lat-a.lat),dg=r(b.lng-a.lng),h=Math.sin(dl/2)**2+Math.cos(r(a.lat))*Math.cos(r(b.lat))*Math.sin(dg/2)**2;return 12742*Math.asin(Math.sqrt(h))};
+let _ps=null;
+function priceStats(){
+  if(_ps)return _ps;
+  const m={};approved().forEach(t=>(t.items||[]).forEach(i=>{if(!i.cat||i.cat==='أخرى')return;const a=n(i.amount);if(a>0)(m[i.cat]=m[i.cat]||[]).push(a)}));
+  _ps={};Object.entries(m).forEach(([k,v])=>{if(v.length>=5)_ps[k]={med:median(v),n:v.length}});
+  return _ps;
+}
+function consCalc(list){
+  const groups=new Map(),rows=new Map();
+  list.slice().sort((a,b)=>a.date.localeCompare(b.date)||(a.createdAt||0)-(b.createdAt||0)||a.id.localeCompare(b.id)).forEach(t=>{
+    const k=t.carId||('d:'+t.driverId);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(t)});
+  const out=new Map();
+  groups.forEach((ts,k)=>{
+    const car=cars.find(c=>c.id===k);let prev=null,prevLoc=null;const rs=[];
+    ts.forEach(t=>{
+      const odo=n(t.odo),L=n(t.liters),r={id:t.id,date:t.date,driverId:t.driverId,odo,liters:L,status:'none'};
+      if(odo>0){
+        if(prev!==null&&prevLoc&&t.loc&&t.loc.odo&&odo>0){r.dist=Math.max(0,hav(prevLoc,t.loc.odo)-((prevLoc.acc||0)+(t.loc.odo.acc||0))/1000);r.gap=odo-prev}
+        if(prev!==null&&L>0){r.km=odo-prev;if(r.km<=0)r.status='badodo';else{r.kmpl=r.km/L;r.l100=L/r.km*100;r.status='calc'}}
+        if(prev===null||odo>prev){prev=odo;prevLoc=t.loc&&t.loc.odo||null}
+      }else if(L>0)r.status='noodo';
+      rs.push(r);rows.set(t.id,r);
+    });
+    const valid=rs.filter(r=>r.status==='calc');
+    valid.forEach(r=>{
+      const others=valid.filter(x=>x!==r).map(x=>x.kmpl);
+      r.base=car&&n(car.expected)>0?n(car.expected):(others.length>=2?median(others):null);
+      if(r.base){r.dev=(r.kmpl-r.base)/r.base*100;r.status=r.dev<-S.thr?'over':(r.dev>S.thr?'under':'calc')}else r.status='watch';
+    });
+    out.set(k,rs);
   });
-  const valid=out.filter(r=>r.status==='calc');
-  valid.forEach(r=>{
-    const others=valid.filter(x=>x!==r).map(x=>x.kmpl);
-    r.base=d&&n(d.expected)>0?n(d.expected):(others.length>=2?median(others):null);
-    if(r.base){
-      r.dev=(r.kmpl-r.base)/r.base*100;
-      r.status=r.dev<-thr()?'over':(r.dev>thr()?'under':'calc');
-    }else r.status='watch';
+  return {rows,groups:out};
+}
+const near=(a,b)=>{a=n(a);b=n(b);return Math.abs(a-b)<=Math.max(1,Math.abs(b)*0.005)};
+function tripFlags(t,row){
+  const f=[];
+  if(t.quality)['odo','fuel','exp'].forEach(k=>{if(t.quality[k])f.push(`صورة ${LBL[k]} ${QFLAG[t.quality[k]]}`)});
+  if(t.pendingExp&&t.pendingExp.quality)f.push('صورة المصاريف الجديدة '+QFLAG[t.pendingExp.quality]);
+  const car=cars.find(c=>c.id===t.carId);
+  if(car&&n(car.tank)>0&&n(t.liters)>n(car.tank)*1.02)f.push(`لترات التفويلة (${fmt(n(t.liters))}) أكبر من سعة خزان العربية (${fmt(n(car.tank))})`);
+  const ps=priceStats();
+  (t.items||[]).concat(t.pendingExp?t.pendingExp.items:[]).forEach(i=>{const p=ps[i.cat];if(p&&n(i.amount)>p.med*(1+S.priceThr/100))f.push(`${i.cat}: ${fmt(n(i.amount))} أعلى من المعتاد (${fmt(p.med)})`)});
+  if(row&&row.dist>5&&row.gap<row.dist*0.85)f.push(`المسافة بين موقعي صورتي العداد (حوالي ${fmt(Math.round(row.dist))} كم) أكبر من فرق القراءتين (${fmt(row.gap)} كم)`);
+  ['odo','fuel','exp'].forEach(k=>{
+    const h=t.hash&&t.hash[k];if(!h)return;
+    const o=trips.find(x=>x.id!==t.id&&x.hash&&['odo','fuel','exp'].some(kk=>dist(h,x.hash[kk])<=5));
+    if(o)f.push(`صورة ${LBL[k]} مشابهة جدًا لصورة في نقلة ${o.date}`);
   });
-  return out;
+  if(t.fromDriver&&t.exif&&t.createdAt){
+    for(const k of ['odo','fuel','exp']){const e=t.exif[k];
+      if(e&&Math.abs(e-t.createdAt)>36*3600e3){f.push(`صورة ${LBL[k]} مصوّرة بتاريخ ${tsfmt(e)} بعيد عن وقت الإرسال`);break}}
+  }
+  if(t.ocr){
+    if(t.ocr.odo&&t.ocr.odo.length&&n(t.odo)&&!t.ocr.odo.some(x=>near(x,t.odo)))f.push('رقم العداد المكتوب لا يطابق الأرقام المقروءة من الصورة');
+    if(t.ocr.fuel&&t.ocr.fuel.length&&n(t.liters)&&!t.ocr.fuel.some(x=>near(x,t.liters)))f.push('اللترات المكتوبة لا تطابق الأرقام المقروءة من صورة التفويلة');
+  }
+  if(t.pendingExp&&t.pendingExp.hash){const o=trips.find(x=>x.id!==t.id&&x.hash&&['odo','fuel','exp'].some(kk=>dist(t.pendingExp.hash,x.hash[kk])<=5));if(o)f.push('صورة المصاريف الجديدة مشابهة جدًا لصورة في نقلة '+o.date)}
+  if(t.fromDriver&&t.stamped&&!(t.loc&&(t.loc.odo||t.loc.fuel||t.loc.exp)))f.push('لم يُسجَّل موقع لصور النقلة (السائق لم يسمح بالموقع)');
+  if(row&&row.km>S.maxKm)f.push(`المسافة ${fmt(row.km)} كم أكبر من الحد (${fmt(S.maxKm)})`);
+  return f;
 }
 function badge(r){
   const [label,cls]=STAT[r.status]||STAT.none;
   const nums=r.kmpl?` — ${fmt(+r.kmpl.toFixed(2))} كم/لتر`:'';
   return `<span class="badge ${cls}">${label}${nums}</span>`;
 }
+
+/* ================= save trip ================= */
+let voiceBlob=null,rec=null,recT=null,recStart=0;
+function voiceUI(){
+  const rb=$('recBtn');rb.textContent=rec?'■ إيقاف':(voiceBlob?'🎙 إعادة التسجيل':'🎙 تسجيل');rb.className='btn'+(rec?' red':'');
+  $('recDel').style.display=voiceBlob&&!rec?'':'none';
+  const a=$('recAudio');
+  if(voiceBlob&&!rec){a.src=URL.createObjectURL(voiceBlob);a.style.display='block'}else{a.removeAttribute('src');a.style.display='none'}
+  if(!rec)$('recInfo').textContent=voiceBlob?'تم التسجيل ✓':'لحد دقيقة. اتكلم عن أي حاجة غير عادية في النقلة.';
+}
+function stopRec(){if(rec&&rec.state!=='inactive')rec.stop()}
+$('recBtn').onclick=async()=>{
+  if(rec){stopRec();return}
+  if(!navigator.mediaDevices||!window.MediaRecorder){toast('التسجيل الصوتي غير مدعوم على هذا المتصفح');return}
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    const mt=['audio/webm;codecs=opus','audio/webm','audio/mp4'].find(m=>MediaRecorder.isTypeSupported(m))||'';
+    const chunks=[];rec=new MediaRecorder(stream,mt?{mimeType:mt}:undefined);
+    rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+    rec.onstop=()=>{stream.getTracks().forEach(t=>t.stop());clearInterval(recT);voiceBlob=new Blob(chunks,{type:rec.mimeType||mt||'audio/webm'});rec=null;voiceUI()};
+    rec.start();recStart=Date.now();
+    recT=setInterval(()=>{const sec=Math.round((Date.now()-recStart)/1000);$('recInfo').textContent='جارِ التسجيل… '+sec+' ث (الحد ٦٠ ث)';if(sec>=60)stopRec()},500);
+    voiceUI();
+  }catch(e){toast('لم يُسمح باستخدام الميكروفون')}
+};
+$('recDel').onclick=()=>{voiceBlob=null;voiceUI()};
+let addTo=null;
+function enterAdd(id){
+  const t=trips.find(x=>x.id===id);if(!t)return;
+  addTo=id;resetForm();
+  ['cTop','cOdo','cFuel','cVoice'].forEach(k=>$(k).style.display='none');
+  $('expHint').style.display='none';
+  $('addTxt').textContent='إضافة مصاريف نقلة '+dfmt(t.date)+(t.odo?' (عداد '+fmt(n(t.odo))+')':'');
+  $('addBanner').style.display='block';
+  $('saveNewTxt').style.display='none';$('saveExpTxt').style.display='inline';
+  scrollTo(0,0);
+}
+function leaveAdd(){
+  addTo=null;
+  ['cTop','cOdo','cFuel','cVoice'].forEach(k=>$(k).style.display='');
+  $('expHint').style.display='';$('addBanner').style.display='none';
+  $('saveNewTxt').style.display='';$('saveExpTxt').style.display='none';
+}
+$('addCancel').onclick=()=>{resetForm();leaveAdd()};
+const cleanItems=()=>items.filter(i=>(i.cat||i.name.trim())&&(i.cat||n(i.amount)||i.name)).map(i=>({cat:i.cat||'أخرى',name:i.name||'',amount:i.amount}));
+async function saveExp(){
+  const t=trips.find(x=>x.id===addTo);if(!t){leaveAdd();return}
+  const clean=cleanItems(),P=photos.exp;
+  if(!P&&!clean.length){toast('أضف صورة المصاريف أو بنودها');return}
+  t.expAdd={items:clean,expImg:P?P.blob:null,hash:P?P.hash:'',exif:P?P.exif:null,loc:P?P.loc:null,quality:P&&P.q?P.q.warn:null,createdAt:Date.now()};
+  t.expSync=base()?'pending':'';t.expAck='';t.expLater=false;
+  await put('trips',t);resetForm();leaveAdd();renderSent();
+  if(base()){toast('جارِ إرسال المصاريف…');await pollDriver()}else await sendExpFile(t);
+}
+$('saveTrip').onclick=async()=>{
+  if(!cur){toast('اختر سائقًا أو أضف سائقًا جديدًا');return}
+  if(addTo){await saveExp();return}
+  const clean=items.filter(i=>(i.cat||i.name.trim())&&(i.cat||n(i.amount)||i.name)).map(i=>({cat:i.cat||'أخرى',name:i.name||'',amount:i.amount}));
+  const P=k=>photos[k]||{};
+  const car=$('tCar').value.trim();
+  const t={
+    id:uid(),driverId:cur,date:$('tDate').value||today(),note:$('tNote').value.trim(),
+    odo:$('odo').value,odoImg:P('odo').blob,liters:$('liters').value,fuelAmt:$('fuelAmt').value,fuelDeduct:$('fuelDeduct').checked,fuelImg:P('fuel').blob,
+    expImg:P('exp').blob,items:clean,expLater:MODE==='driver'&&!clean.length&&!P('exp').blob,
+    hash:{odo:P('odo').hash||'',fuel:P('fuel').hash||'',exp:P('exp').hash||''},
+    exif:{odo:P('odo').exif||null,fuel:P('fuel').exif||null,exp:P('exp').exif||null},
+    ocr:{odo:P('odo').ocr||null,fuel:P('fuel').ocr||null},
+    loc:{odo:P('odo').loc||null,fuel:P('fuel').loc||null,exp:P('exp').loc||null},stamped:MODE==='driver',
+    quality:{odo:(P('odo').q||{}).warn||null,fuel:(P('fuel').q||{}).warn||null,exp:(P('exp').q||{}).warn||null},voice:voiceBlob||null,
+    createdAt:Date.now(),fromDriver:MODE==='driver',status:MODE==='driver'?'sent':'approved'
+  };
+  if(!t.odoImg&&!t.fuelImg&&!t.expImg&&!clean.length&&!t.odo&&!t.voice){toast('أضف صورة أو بيانات أولًا');return}
+  if(MODE==='driver'){t.carName=car;if(car)localStorage.setItem('lastCar',car);t.sync=base()?'pending':'';}
+  else t.carId=await ensureCar(car);
+  await put('trips',t);trips.push(t);
+  resetForm();
+  if(MODE==='driver'){
+    renderSent();renderCarList();
+    if(base()){toast('جارِ إرسال النقلة…');await pollDriver()}else await sendFile(t);
+    if(t.expLater)toast('تم إرسال العدادين ✓ — أضف المصاريف لما تكتمل من «نقلاتي المُرسلة»',6000);
+    scrollTo(0,document.body.scrollHeight);return;
+  }
+  renderAll();
+  const row=consCalc(trips).rows.get(t.id),fl=tripFlags(t,row);
+  if(row&&flagged(row.status))toast('تم الحفظ — '+STAT[row.status][0],5000);
+  else if(fl.length)toast('تم الحفظ — تنبيه: '+fl[0],5000);
+  else toast('تم حفظ النقلة وخصمها من العهدة');
+  show('log');
+};
+function resetForm(){
+  ['odo','liters','fuelAmt','tNote'].forEach(i=>$(i).value='');
+  $('fuelDeduct').checked=false;$('tDate').value=today();
+  ['odo','fuel','exp'].forEach(k=>$('ph-'+k)._reset());
+  items=[{cat:'',name:'',amount:''}];renderItems();
+  voiceBlob=null;voiceUI();
+}
+
+/* ================= log (admin) ================= */
+const urls=new Map();
+function url(b){if(!b)return'';if(!urls.has(b))urls.set(b,URL.createObjectURL(b));return urls.get(b)}
+function tripCard(t,rows){
+  const pend=t.status==='pending',c=rows.get(t.id),fl=tripFlags(t,c);
+  const locs=['odo','fuel','exp'].filter(k=>t.loc&&t.loc[k]).map(k=>`<a class="badge" target="_blank" rel="noopener" href="https://www.google.com/maps?q=${t.loc[k].lat},${t.loc[k].lng}">📍 ${LBL[k]}</a>`).join(' ');
+  const pe=t.pendingExp;
+  const peHtml=pe?`<div class="card" style="border:2px solid var(--amber);margin:8px 0 0"><b>مصاريف جديدة من السائق بانتظار اعتمادك</b><div style="font-size:15px;margin-top:4px">${pe.items.map(i=>esc(itemLabel(i))+': '+fmt(n(i.amount))).join(' • ')||'—'}</div><div class="tot"><span>الإجمالي</span><span>${fmt(pe.items.reduce((s,i)=>s+n(i.amount),0))}</span></div>${pe.expImg?`<div class="thumbs"><div><img src="${url(pe.expImg)}" data-zoom alt="المصاريف"><span>المصاريف</span></div></div>`:''}<div class="row" style="margin-top:8px"><button class="btn sm" data-act="apprexp" data-id="${t.id}">اعتماد المصاريف</button><button class="btn red sm" data-act="rejexp" data-id="${t.id}">رفض المصاريف</button></div></div>`:'';
+  const acts=pend
+    ?`<button class="btn sm" data-act="approve" data-id="${t.id}">اعتماد</button><button class="btn ghost sm" data-act="edit" data-id="${t.id}">تعديل</button><button class="btn red sm" data-act="del" data-id="${t.id}">رفض</button>`
+    :`<button class="btn ghost sm" data-act="edit" data-id="${t.id}">تعديل</button><button class="btn ghost sm" data-act="del" data-id="${t.id}">حذف</button>`;
+  return `<div class="card trip ${pend||t.pendingExp?'pend':''}">
+    <div class="top"><div><b>${dfmt(t.date)}</b>${pend?` <span class="badge warn">${esc(drvName(t.driverId))} — بانتظار الاعتماد</span>`:''}
+    <div style="color:var(--muted);font-size:14px">${['👤 '+esc(drvName(t.driverId)),carName(t)&&'🚛 '+esc(carName(t)),t.note&&esc(t.note)].filter(Boolean).join(' • ')}</div></div></div>
+    <div style="margin-top:8px;font-size:15px;line-height:1.9">
+      ${t.odo?`العداد: <b>${fmt(n(t.odo))}</b> كم<br>`:''}
+      ${t.liters||t.fuelAmt?`التفويلة: <b>${fmt(n(t.liters))}</b> لتر${t.fuelAmt?` — ${fmt(n(t.fuelAmt))}${t.fuelDeduct?' (من العهدة)':''}`:''}<br>`:''}
+      ${(t.items||[]).map(i=>`${esc(itemLabel(i))}: ${fmt(n(i.amount))}`).join(' • ')}
+    </div>
+    ${c&&c.status!=='none'?`<div style="margin-top:6px">${badge(c)}</div>`:''}
+    ${fl.map(x=>`<div><span class="badge bad">⚠ ${esc(x)}</span></div>`).join('')}
+    <div class="tot"><span>${pend?'سيُخصم من العهدة عند الاعتماد':'المخصوم من العهدة'}</span><span>${fmt(tripCost(t))}</span></div>
+    <div class="thumbs">${[['odoImg','العداد'],['fuelImg','التفويلة'],['expImg','المصاريف']].map(([k,l])=>t[k]?`<div><img src="${url(t[k])}" data-zoom alt="${l}"><span>${l}</span></div>`:'<div></div>').join('')}</div>
+    ${t.expLater?`<div style="margin-top:6px"><span class="badge warn">⏳ المصاريف لسه ما اتسجلتش — السائق هيضيفها</span> <button class="btn ghost sm" data-act="noexp" data-id="${t.id}">بدون مصاريف</button></div>`:''}
+    ${peHtml}
+    ${t.voice?`<div style="margin-top:8px">🎙 ملاحظة صوتية من السائق<audio controls preload="none" src="${url(t.voice)}" style="width:100%;margin-top:4px"></audio></div>`:''}
+    ${locs?`<div style="margin-top:6px">${locs}</div>`:''}
+    <div class="row" style="margin-top:10px">${acts}</div>
+  </div>`;
+}
+let syncMsg='';
+let logF={driver:'',car:'',from:'',to:'',status:'all',q:''},logLimit=30;
+const LOGF0=()=>({driver:'',car:'',from:'',to:'',status:'all',q:''});
+function tripMatch(t,rows){
+  const F=logF;
+  if(F.driver&&t.driverId!==F.driver)return false;
+  if(F.car&&(t.carId||'')!==F.car)return false;
+  if(F.from&&t.date<F.from)return false;
+  if(F.to&&t.date>F.to)return false;
+  if(F.status==='pending'&&!(t.status==='pending'||t.pendingExp))return false;
+  if(F.status==='noexp'&&!(t.expLater||t.pendingExp))return false;
+  if(F.status==='flagged'){const r=rows.get(t.id);if(!(tripFlags(t,r).length||(r&&flagged(r.status))))return false}
+  if(F.q){const hay=[t.note,drvName(t.driverId),carName(t),(t.items||[]).map(itemLabel).join(' '),t.odo].join(' ').toLowerCase();
+    if(!F.q.toLowerCase().split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true;
+}
+function renderLog(){
+  const v=$('v-log');
+  const top=`<div class="card"><div class="row"><button class="btn ghost" id="goNew">＋ نقلة يدوية</button>${syncOn()?'<button class="btn" id="syncNow">تحديث الآن</button>':''}<label class="btn amber" style="text-align:center;cursor:pointer">استيراد ملف<input type="file" id="impFile" multiple hidden></label></div>
+    <small class="h">${syncOn()?esc(syncMsg||'المزامنة مفعّلة — النقلات بتوصل تلقائيًا.'):'المزامنة غير مفعّلة — السائق بيبعت ملف على واتساب وتستورده من هنا. (فعّلها من تبويب المزيد)'}</small></div>`;
+  const F=logF,chip=(k,l)=>`<button class="chip ${F.status===k?'on':''}" data-st="${k}">${l}</button>`;
+  const ctl=`<div class="card"><div class="row"><select class="in" id="fDrv"><option value="">كل السائقين</option>${drivers.map(d=>`<option value="${d.id}" ${F.driver===d.id?'selected':''}>${esc(d.name)}</option>`).join('')}</select>
+    <select class="in" id="fCar"><option value="">كل العربيات</option>${cars.map(c=>`<option value="${c.id}" ${F.car===c.id?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:8px"><input type="date" id="fFrom" value="${F.from}" aria-label="من"><input type="date" id="fTo" value="${F.to}" aria-label="إلى"></div>
+    <input type="text" id="fQ" placeholder="بحث: ملاحظة، بند، رقم عداد…" value="${esc(F.q)}" style="margin-top:8px">
+    <div class="fchips">${chip('all','الكل')}${chip('pending','بانتظار اعتمادك')}${chip('flagged','فيها تنبيهات')}${chip('noexp','مصاريف ناقصة')}<button class="chip" id="fClear">مسح الفلاتر</button></div></div>`;
+  v.innerHTML=top+ctl+'<div id="lgList"></div>';
+  renderLogList();
+}
+function renderLogList(){
+  const el=$('lgList');if(!el)return;
+  const sortF=(a,b)=>b.date.localeCompare(a.date)||(b.createdAt||0)-(a.createdAt||0);
+  const rows=consCalc(trips).rows;
+  const all=trips.filter(t=>tripMatch(t,rows));
+  const pend=all.filter(t=>t.status==='pending'||t.pendingExp).sort(sortF);
+  const done=all.filter(t=>t.status!=='pending'&&!t.pendingExp).sort(sortF);
+  const shown=done.slice(0,logLimit);
+  const tot=all.reduce((s,t)=>s+(t.status==='pending'?0:tripCost(t)),0);
+  let bal='';
+  if(logF.driver){const a=account(logF.driver);bal=`<div class="card"><div class="bal"><div><small>العهدة</small><b>${fmt(a.c)}</b></div><div><small>المصاريف</small><b>${fmt(a.e)}</b></div><div><small>المتبقي</small><b class="${a.b<0?'neg':'pos'}">${fmt(a.b)}</b></div></div></div>`}
+  el.innerHTML=bal+`<small class="h" style="margin:0 2px 8px">${all.length} نتيجة • إجمالي المخصوم في النتائج المعتمدة: ${fmt(tot)}</small>`+
+    (pend.length?`<h2 style="font-size:16px;margin:4px 2px 8px">بانتظار اعتمادك (${pend.length})</h2>`+pend.map(t=>tripCard(t,rows)).join(''):'')+
+    (shown.length?shown.map(t=>tripCard(t,rows)).join(''):(pend.length?'':'<div class="empty">لا توجد نتائج</div>'))+
+    (done.length>logLimit?`<button class="btn ghost full" id="moreLog">عرض المزيد (${done.length-logLimit})</button>`:'');
+}
+let fT=null;
+$('v-log').addEventListener('input',e=>{
+  if(e.target.id==='fQ'){logF.q=e.target.value.trim();logLimit=30;clearTimeout(fT);fT=setTimeout(renderLogList,250)}
+});
+$('v-log').addEventListener('change',e=>{
+  const t=e.target,m={fDrv:'driver',fCar:'car',fFrom:'from',fTo:'to'}[t.id];
+  if(m){logF[m]=t.value;logLimit=30;renderLogList()}
+});
+function dashGo(status,driver){logF=LOGF0();logF.status=status||'all';logF.driver=driver||'';logLimit=30;renderLog();show('log')}
+/* ---------- dashboard ---------- */
+function renderDash(){
+  if(MODE!=='admin')return;
+  const v=$('v-dash'),rows=consCalc(trips).rows,wk=Date.now()-7*864e5;
+  const pend=trips.filter(t=>t.status==='pending'||t.pendingExp).length;
+  const noexp=trips.filter(t=>t.expLater&&!t.pendingExp).length;
+  const recent=trips.filter(t=>t.status!=='pending'&&new Date(t.date+'T00:00:00').getTime()>=wk);
+  const flg=recent.filter(t=>{const r=rows.get(t.id);return tripFlags(t,r).length||(r&&flagged(r.status))}).length;
+  const low=drivers.filter(d=>{const a=account(d.id);return S.lowCust>0&&custody.some(c=>c.driverId===d.id&&!c.closed)&&a.b<S.lowCust});
+  const idle=S.idleDays>0?drivers.map(d=>{const ts=trips.filter(t=>t.driverId===d.id);const last=ts.length?Math.max(...ts.map(t=>t.createdAt||new Date(t.date+'T00:00:00').getTime())):0;
+    return {d,days:last?Math.floor((Date.now()-last)/864e5):null}}).filter(x=>x.days===null||x.days>=S.idleDays):[];
+  const wkAll=recent.concat(trips.filter(t=>t.status==='pending'&&new Date(t.date+'T00:00:00').getTime()>=wk));
+  const exp=recent.reduce((s,t)=>s+tripCost(t),0),lit=wkAll.reduce((s,t)=>s+n(t.liters),0);
+  const lb=+localStorage.getItem('lastBackup')||0;
+  const bk=(trips.length||custody.length)&&(Date.now()-lb>7*864e5)?`<div class="alert">${lb?'آخر نسخة احتياطية من '+Math.floor((Date.now()-lb)/864e5)+' يوم':'لم تأخذ نسخة احتياطية بعد'} <button class="btn amber sm" id="bkNow" style="margin-inline-start:8px">نسخة الآن</button></div>`:'';
+  v.innerHTML=bk+`<div class="tiles">
+    <button class="tile ${pend?'hot':''}" data-go="pending"><b>${pend}</b><span>بانتظار اعتمادك</span></button>
+    <button class="tile ${flg?'red':''}" data-go="flagged"><b>${flg}</b><span>نقلات فيها تنبيهات (٧ أيام)</span></button>
+    <button class="tile" data-go="noexp"><b>${noexp+trips.filter(t=>t.pendingExp).length}</b><span>مصاريف ناقصة / جديدة</span></button>
+    <button class="tile ${low.length?'red':''}" data-go="low"><b>${low.length}</b><span>عهدات قاربت تخلص</span></button></div>`+
+  (low.length?`<div class="card lst"><h2>عهدات قاربت تخلص</h2>${low.map(d=>`<div class="r"><span>${esc(d.name)}</span><span><b class="neg">${fmt(account(d.id).b)}</b> <button class="btn ghost sm" data-cust="${d.id}">العهدة</button></span></div>`).join('')}</div>`:'')+
+  (idle.length?`<div class="card lst"><h2>سائقين ما بعتوش نقلات</h2>${idle.map(x=>`<div class="r"><span>${esc(x.d.name)}</span><span style="color:var(--muted)">${x.days===null?'لم يرسل بعد':'من '+x.days+' يوم'} <button class="btn ghost sm" data-drv="${x.d.id}">سجله</button></span></div>`).join('')}</div>`:'')+
+  `<div class="card"><h2>آخر ٧ أيام</h2><div class="bal"><div><small>نقلات</small><b>${wkAll.length}</b></div><div><small>مصاريف معتمدة</small><b>${fmt(exp)}</b></div><div><small>لترات</small><b>${fmt(lit)}</b></div></div></div>
+  <div class="row"><button class="btn" id="dNew">＋ نقلة يدوية</button>${syncOn()?'<button class="btn amber" id="dSync">تحديث الآن</button>':''}</div>`;
+}
+$('v-dash').addEventListener('click',async e=>{
+  const t=e.target.closest('button');if(!t)return;
+  if(t.dataset.go==='low'){const d=drivers.find(d=>{const a=account(d.id);return S.lowCust>0&&custody.some(c=>c.driverId===d.id&&!c.closed)&&a.b<S.lowCust});if(d){cur=d.id;localStorage.setItem('curDriver',cur);renderAll()}show('cust');return}
+  if(t.dataset.go){dashGo(t.dataset.go);return}
+  if(t.dataset.cust){cur=t.dataset.cust;localStorage.setItem('curDriver',cur);renderAll();show('cust');return}
+  if(t.dataset.drv){dashGo('all',t.dataset.drv);return}
+  if(t.id==='bkNow'){makeBackup(true);return}
+  if(t.id==='dNew'){show('new');return}
+  if(t.id==='dSync'){toast('جارِ التحديث…');await pollAdmin(true)}
+});
+$('v-log').addEventListener('click',async e=>{
+  const t=e.target;
+  if(t.dataset.zoom!==undefined){$('viewer').firstElementChild.src=t.src;$('viewer').style.display='flex';return}
+  if(t.id==='goNew'){show('new');return}
+  if(t.id==='moreLog'){logLimit+=30;renderLogList();return}
+  if(t.id==='fClear'){logF=LOGF0();logLimit=30;renderLog();return}
+  if(t.dataset.st){logF.status=t.dataset.st;logLimit=30;renderLog();return}
+  if(t.id==='syncNow'){toast('جارِ التحديث…');await pollAdmin(true);return}
+  const act=t.dataset.act,id=t.dataset.id;if(!act)return;
+  const tr=trips.find(x=>x.id===id);if(!tr)return;
+  if(act==='approve'){tr.status='approved';await put('trips',tr);setAck(id,'approved',tr.driverId);renderAll();toast('تم الاعتماد وخصم المصاريف من العهدة')}
+  else if(act==='edit')openEdit(tr);
+  else if(act==='noexp'){tr.expLater=false;await put('trips',tr);renderAll()}
+  else if(act==='apprexp'){applyExp(tr,tr.pendingExp);tr.expState='approved';await put('trips',tr);setAck(id+'x','approved',tr.driverId);renderAll();toast('تم اعتماد المصاريف وخصمها من العهدة')}
+  else if(act==='rejexp'){if(confirm('رفض المصاريف المرسلة؟')){delete tr.pendingExp;tr.expState='rejected';tr.expLater=true;await put('trips',tr);setAck(id+'x','rejected',tr.driverId);renderAll()}}
+  else if(act==='del'){
+    const pend=tr.status==='pending';
+    if(confirm(pend?'رفض هذه النقلة وحذفها؟':'حذف هذه النقلة؟ ستعود قيمتها إلى العهدة.')){
+      await del('trips',id);trips=trips.filter(x=>x.id!==id);if(pend)setAck(id,'rejected',tr.driverId);renderAll()}
+  }
+});
+$('v-log').addEventListener('change',e=>{if(e.target.id==='impFile'){importFiles([...e.target.files]);e.target.value=''}});
+$('viewer').onclick=()=>$('viewer').style.display='none';
+
+/* ================= edit trip ================= */
+let editing=null;
+function openEdit(t){
+  editing=t;
+  $('eDate').value=t.date;$('eNote').value=t.note||'';$('eCar').value=carName(t);$('eOdo').value=t.odo||'';$('eLiters').value=t.liters||'';
+  $('eFuelAmt').value=t.fuelAmt||'';$('eDeduct').checked=!!t.fuelDeduct;
+  $('eItems').value=(t.items||[]).map(i=>`${itemLabel(i)}: ${i.amount}`).join('\n');
+  $('editModal').style.display='flex';
+}
+$('eCancel').onclick=()=>{$('editModal').style.display='none';editing=null};
+$('eSave').onclick=async()=>{
+  const t=editing;if(!t)return;
+  t.date=$('eDate').value||t.date;t.note=$('eNote').value.trim();t.odo=$('eOdo').value;t.liters=$('eLiters').value;
+  t.fuelAmt=$('eFuelAmt').value;t.fuelDeduct=$('eDeduct').checked;
+  t.carId=await ensureCar($('eCar').value);t.carName=$('eCar').value.trim();
+  const cl=cats();
+  t.items=$('eItems').value.split('\n').map(l=>l.replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[٫،]/g,'.').trim()).filter(Boolean).map(l=>{
+    const m=l.match(/^(.*?)[\s:：\-]*(\d+(?:\.\d+)?)\s*$/),nm=(m?m[1]:l).trim();
+    const cat=cl.includes(nm)?nm:'أخرى';
+    return {cat,name:cat==='أخرى'?nm:'',amount:m?m[2]:''};
+  });
+  if(t.items.length)t.expLater=false;
+  await put('trips',t);$('editModal').style.display='none';editing=null;renderAll();toast('تم حفظ التعديل');
+};
+
+/* ================= consumption tab ================= */
+let consSel='';
+function groupLabel(k,rs){const c=cars.find(x=>x.id===k);return c?c.name:('بدون عربية — '+drvName((rs[0]||{}).driverId))}
 function renderCons(){
   const v=$('v-cons');
-  if(!cur){v.innerHTML='<div class="empty">أضف سائقًا لتبدأ</div>';return}
-  const d=drivers.find(x=>x.id===cur),rows=consumption(cur),valid=rows.filter(r=>r.kmpl);
-  const km=valid.reduce((s,r)=>s+r.km,0),L=valid.reduce((s,r)=>s+r.liters,0);
-  const avg=L?km/L:0,last=rows[rows.length-1];
-  const banner=last&&flagged(last.status)?`<div class="alert">${STAT[last.status][0]}${last.dev!==undefined?` (${fmt(+last.dev.toFixed(1))}٪ عن المعدل)`:''}</div>`:
-    (valid.length?`<div class="okbox">الاستهلاك في الحدود المعتادة</div>`:'');
-  v.innerHTML=banner+`<div class="card"><h2>استهلاك ${esc(d.name)}</h2><div class="bal">
+  const {rows,groups}=consCalc(approved());
+  const keys=[...groups.keys()];
+  if(!keys.length){v.innerHTML='<div class="empty">لا توجد نقلات معتمدة بعد</div>';return}
+  if(!keys.includes(consSel))consSel=keys[0];
+  const rs=groups.get(consSel),valid=rs.filter(r=>r.kmpl),car=cars.find(c=>c.id===consSel);
+  const km=valid.reduce((s,r)=>s+r.km,0),L=valid.reduce((s,r)=>s+r.liters,0),avg=L?km/L:0,last=rs[rs.length-1];
+  const banner=last&&flagged(last.status)?`<div class="alert">${STAT[last.status][0]}${last.dev!==undefined?` (${fmt(+last.dev.toFixed(1))}٪ عن المعدل)`:''}</div>`:(valid.length?'<div class="okbox">الاستهلاك في الحدود المعتادة</div>':'');
+  v.innerHTML=`<div class="card"><label class="f" style="margin-top:0">العربية</label><select class="in" id="consSel">${keys.map(k=>`<option value="${esc(k)}" ${k===consSel?'selected':''}>${esc(groupLabel(k,groups.get(k)))}</option>`).join('')}</select></div>`+banner+
+  `<div class="card"><div class="bal">
     <div><small>متوسط كم/لتر</small><b>${avg?fmt(+avg.toFixed(2)):'—'}</b></div>
     <div><small>لتر/١٠٠ كم</small><b>${avg?fmt(+(100/avg).toFixed(1)):'—'}</b></div>
     <div><small>إجمالي الكم</small><b>${fmt(km)}</b></div></div>
-    <p style="color:var(--muted);font-size:13px;margin:10px 0 0">المعدل = المسافة بين قراءتي العداد ÷ لترات التفويلة. الأدق أن تكون كل تفويلة حتى امتلاء الخزان.</p></div>
-  <div class="card"><h2>إعدادات المتابعة</h2>
-    <div class="row"><div><label class="f" style="margin-top:0">المعدل المتوقع (كم/لتر)</label><input type="number" inputmode="decimal" id="expKmpl" value="${d.expected||''}" placeholder="تلقائي من السجل"></div>
-    <div><label class="f" style="margin-top:0">حد التنبيه ٪</label><input type="number" inputmode="decimal" id="thrIn" value="${thr()}"></div></div>
-    <button class="btn" style="width:100%;margin-top:10px" id="saveSet">حفظ الإعدادات</button></div>
-  <div class="card lst"><h2>تفاصيل كل تفويلة</h2>${rows.length?rows.slice().reverse().map(r=>`<div class="r" style="display:block"><div style="display:flex;justify-content:space-between"><b>${dfmt(r.date)}</b><span style="color:var(--muted);font-size:14px">${r.km>0?fmt(r.km)+' كم':''}${r.liters?' • '+fmt(r.liters)+' لتر':''}</span></div><div style="margin-top:4px">${badge(r)}</div></div>`).join(''):'<div class="empty">لا توجد بيانات بعد</div>'}</div>`;
+    <small class="h">${car&&n(car.expected)?'المعدل المتوقع للعربية: '+fmt(n(car.expected))+' كم/لتر':'لا يوجد معدل متوقع — بيقارن بمتوسط وسيط نقلاتها السابقة (يتغيّر من المزيد ← العربيات).'} • حد التنبيه ${fmt(S.thr)}٪</small>
+    <small class="h">المعدل = المسافة بين قراءتي العداد ÷ لترات التفويلة. الأدق أن تكون كل تفويلة حتى امتلاء الخزان.</small></div>
+  <div class="card lst"><h2>تفاصيل كل تفويلة</h2>${rs.slice().reverse().map(r=>{
+    const t=trips.find(x=>x.id===r.id),fl=t?tripFlags(t,r):[];
+    return `<div class="r" style="display:block"><div style="display:flex;justify-content:space-between"><b>${dfmt(r.date)}</b><span style="color:var(--muted);font-size:14px">${esc(drvName(r.driverId))}${r.km>0?' • '+fmt(r.km)+' كم':''}${r.liters?' • '+fmt(r.liters)+' لتر':''}</span></div><div style="margin-top:4px">${badge(r)}</div>${fl.map(x=>`<div><span class="badge bad">⚠ ${esc(x)}</span></div>`).join('')}</div>`}).join('')}</div>`;
 }
-$('v-cons').addEventListener('click',async e=>{
-  if(e.target.id==='saveSet'){
-    localStorage.setItem('thr',String(n($('thrIn').value)||20));
-    const d=drivers.find(x=>x.id===cur);d.expected=n($('expKmpl').value)||'';
-    await put('drivers',d);renderCons();renderLog();toast('تم حفظ الإعدادات');
-  }
+$('v-cons').addEventListener('change',e=>{if(e.target.id==='consSel'){consSel=e.target.value;renderCons()}});
+
+/* ================= custody tab ================= */
+function renderCust(){
+  const v=$('v-cust');
+  if(!cur){v.innerHTML='<div class="empty">أضف سائقًا لتبدأ</div>';return}
+  const a=account(cur),d=drivers.find(x=>x.id===cur);
+  const list=custody.filter(x=>x.driverId===cur).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
+  const cl=closings.filter(x=>x.driverId===cur).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id)).slice(0,8);
+  v.innerHTML=`<div class="card"><h2>عهدة ${esc(d.name)} (الفترة المفتوحة)</h2><div class="bal">
+    <div><small>إجمالي العهدة</small><b>${fmt(a.c)}</b></div>
+    <div><small>المصاريف</small><b>${fmt(a.e)}</b></div>
+    <div><small>المتبقي</small><b class="${a.b<0?'neg':'pos'}">${fmt(a.b)}</b></div></div>
+    <button class="btn amber full" style="margin-top:12px" id="shareAcc">إرسال كشف الحساب واتساب</button>
+    <button class="btn ghost full" style="margin-top:8px" id="closeCust">إقفال العهدة وتسويتها</button>
+    <button class="btn ghost full" style="margin-top:8px" id="showQR">كود QR للسائق</button></div>
+  <div class="card"><h2>إضافة عهدة</h2>
+    <div class="row"><div><input type="number" inputmode="decimal" id="cAmt" placeholder="المبلغ"></div><div><input type="date" id="cDate" value="${today()}"></div></div>
+    <input type="text" id="cNote" placeholder="ملاحظة (اختياري)" style="margin-top:8px">
+    <button class="btn full" style="margin-top:10px" id="addCust">إضافة العهدة</button></div>
+  <div class="card lst"><h2>سجل العهدة</h2>${list.length?list.map(x=>`<div class="r"><div><b>${fmt(n(x.amount))}</b> <span style="color:var(--muted);font-size:14px">${dfmt(x.date)}${x.note?' — '+esc(x.note):''}${x.closed?' • مُقفلة':''}</span></div>${x.closed?'':`<button class="btn ghost sm" data-dc="${x.id}">حذف</button>`}</div>`).join(''):'<div class="empty">لا توجد عهدة مسجلة</div>'}</div>
+  ${cl.length?`<div class="card lst"><h2>سجل التسويات</h2>${cl.map(x=>`<div class="r" style="display:block"><b>${dfmt(x.date)}</b> — عهدة ${fmt(x.custody)} • مصاريف ${fmt(x.spent)} • متبقي <b class="${x.remaining<0?'neg':'pos'}">${fmt(x.remaining)}</b> ${x.carried?'(رُحّل)':'(سُوّي)'}</div>`).join('')}</div>`:''}`;
+}
+async function closeCustody(did){
+  const a=account(did),d=drivers.find(x=>x.id===did);
+  if(!a.c&&!a.e){toast('لا يوجد شيء لتسويته');return}
+  if(!confirm(`إقفال عهدة ${d.name}؟\nالعهدة ${fmt(a.c)} − المصاريف ${fmt(a.e)} = المتبقي ${fmt(a.b)}`))return;
+  const carry=a.b!==0&&confirm(`ترحيل المتبقي (${fmt(a.b)}) كعهدة جديدة؟\nموافق = ترحيل\nإلغاء = تسوية نهائية بدون ترحيل`);
+  const cl={id:uid(),driverId:did,date:today(),custody:a.c,spent:a.e,remaining:a.b,carried:carry};
+  for(const c of custody.filter(x=>x.driverId===did&&!x.closed)){c.closed=true;c.closeId=cl.id;await put('custody',c)}
+  for(const t of approved().filter(x=>x.driverId===did&&!x.closed)){t.closed=true;t.closeId=cl.id;await put('trips',t)}
+  await put('closings',cl);closings.push(cl);
+  if(carry){const c={id:uid(),driverId:did,amount:a.b,date:today(),note:'مرحّل من تسوية '+dfmt(today()),carried:true};await put('custody',c);custody.push(c)}
+  renderAll();toast('تمت التسوية');
+}
+$('v-cust').addEventListener('click',async e=>{
+  const t=e.target;
+  if(t.id==='addCust'){
+    const amt=n($('cAmt').value);if(!amt){toast('اكتب المبلغ');return}
+    const c={id:uid(),driverId:cur,amount:amt,date:$('cDate').value||today(),note:$('cNote').value.trim()};
+    await put('custody',c);custody.push(c);renderAll();toast('تمت إضافة العهدة');
+  }else if(t.dataset.dc&&confirm('حذف هذه العهدة؟')){
+    await del('custody',t.dataset.dc);custody=custody.filter(x=>x.id!==t.dataset.dc);renderAll();
+  }else if(t.id==='closeCust')closeCustody(cur);
+  else if(t.id==='shareAcc'){
+    const d=drivers.find(x=>x.id===cur),a=account(cur);
+    window.open('https://wa.me/?text='+encodeURIComponent(`كشف حساب السائق: ${d.name}\nإجمالي العهدة: ${fmt(a.c)}\nإجمالي المصاريف: ${fmt(a.e)}\nالمتبقي: ${fmt(a.b)}`),'_blank');
+  }else if(t.id==='showQR')openQR();
 });
 
-/* ---------- QR for driver ---------- */
+/* ================= reports ================= */
+function monthRange(off=0){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()+off);const f=d.toISOString().slice(0,10);d.setMonth(d.getMonth()+1);d.setDate(0);return [f,d.toISOString().slice(0,10)]}
+function renderRepForm(){
+  const [f,t]=monthRange(0);
+  $('repForm').innerHTML=`<label class="f" style="margin-top:0">السائق</label><select class="in" id="rDrv"><option value="">كل السائقين</option>${drivers.map(d=>`<option value="${d.id}" ${d.id===cur?'selected':''}>${esc(d.name)}</option>`).join('')}</select>
+  <div class="row"><div><label class="f">من</label><input type="date" id="rFrom" value="${f}"></div><div><label class="f">إلى</label><input type="date" id="rTo" value="${t}"></div></div>
+  <div class="row" style="margin-top:8px"><button class="btn ghost sm" data-pre="0">هذا الشهر</button><button class="btn ghost sm" data-pre="-1">الشهر الماضي</button><button class="btn ghost sm" data-pre="all">الكل</button></div>
+  <button class="btn full" style="margin-top:10px" id="rShow">عرض التقرير</button>`;
+}
+let rep=null;
+function buildReport(){
+  const did=$('rDrv').value,from=$('rFrom').value,to=$('rTo').value;
+  const inR=x=>(!did||x.driverId===did)&&(!from||x.date>=from)&&(!to||x.date<=to);
+  const rows=consCalc(approved()).rows;
+  const ts=approved().filter(inR).sort((a,b)=>a.date.localeCompare(b.date)||(a.createdAt||0)-(b.createdAt||0));
+  const cu=custody.filter(inR);
+  const recv=cu.filter(c=>!c.carried).reduce((s,c)=>s+n(c.amount),0);
+  const exp=ts.reduce((s,t)=>s+tripCost(t),0);
+  const byCat={};ts.forEach(t=>{(t.items||[]).forEach(i=>{const k=i.cat&&i.cat!=='أخرى'?i.cat:(i.name||'أخرى');byCat[k]=(byCat[k]||0)+n(i.amount)});if(t.fuelDeduct&&n(t.fuelAmt))byCat['تفويلة (من العهدة)']=(byCat['تفويلة (من العهدة)']||0)+n(t.fuelAmt)});
+  const byCar={};ts.forEach(t=>{const r=rows.get(t.id),k=carName(t)||'بدون عربية';const o=byCar[k]||(byCar[k]={km:0,L:0,fuelL:0,flags:0,trips:0});
+    o.trips++;o.fuelL+=n(t.liters);if(r&&r.kmpl){o.km+=r.km;o.L+=r.liters}if(tripFlags(t,r).length||(r&&flagged(r.status)))o.flags++});
+  const liters=ts.reduce((s,t)=>s+n(t.liters),0);
+  const km=Object.values(byCar).reduce((s,o)=>s+o.km,0),L=Object.values(byCar).reduce((s,o)=>s+o.L,0);
+  const dn=did?drvName(did):'كل السائقين';
+  const period=(from?dfmt(from):'البداية')+' إلى '+(to?dfmt(to):'اليوم');
+  const tr=ts.map(t=>{const r=rows.get(t.id);return {date:t.date,driver:drvName(t.driverId),car:carName(t),odo:t.odo||'',liters:t.liters||'',kmpl:r&&r.kmpl?+r.kmpl.toFixed(2):'',fuelAmt:t.fuelDeduct?t.fuelAmt:'',exp:(t.items||[]).reduce((s,i)=>s+n(i.amount),0),cost:tripCost(t),det:(t.items||[]).map(i=>itemLabel(i)+' '+i.amount).join(' + '),flags:tripFlags(t,r).concat(r&&flagged(r.status)?[STAT[r.status][0].replace('⚠ ','')]:[]).join(' / ')}});
+  const bal=did?account(did):null;
+  const html=`<h3 style="margin:0 0 4px">تقرير ${esc(dn)}</h3><div style="color:var(--muted);margin-bottom:8px">${esc(period)}</div>
+  <table class="rtable"><tr><th>العهدة المستلمة</th><td>${fmt(recv)}</td><th>إجمالي المصاريف</th><td>${fmt(exp)}</td></tr>
+  <tr><th>إجمالي اللترات</th><td>${fmt(liters)}</td><th>المسافة المحسوبة (كم)</th><td>${fmt(km)}</td></tr>
+  <tr><th>متوسط كم/لتر</th><td>${L?fmt(+(km/L).toFixed(2)):'—'}</td><th>${bal?'المتبقي الحالي':'عدد النقلات'}</th><td>${bal?fmt(bal.b):ts.length}</td></tr></table>
+  ${Object.keys(byCat).length?`<b>المصاريف حسب التصنيف</b><table class="rtable">${Object.entries(byCat).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${fmt(v)}</td></tr>`).join('')}</table>`:''}
+  ${Object.keys(byCar).length?`<b>حسب العربية</b><div class="scroll"><table class="rtable"><tr><th>العربية</th><th>نقلات</th><th>لترات</th><th>كم</th><th>كم/لتر</th><th>تنبيهات</th></tr>${Object.entries(byCar).map(([k,o])=>`<tr><td>${esc(k)}</td><td>${o.trips}</td><td>${fmt(o.fuelL)}</td><td>${fmt(o.km)}</td><td>${o.L?fmt(+(o.km/o.L).toFixed(2)):'—'}</td><td>${o.flags}</td></tr>`).join('')}</table></div>`:''}
+  <b>النقلات</b><div class="scroll"><table class="rtable"><tr><th>التاريخ</th><th>السائق</th><th>العربية</th><th>العداد</th><th>لتر</th><th>كم/لتر</th><th>مصاريف</th><th>المخصوم</th><th>تنبيهات</th></tr>
+  ${tr.map(r=>`<tr><td>${dfmt(r.date)}</td><td>${esc(r.driver)}</td><td>${esc(r.car)}</td><td>${r.odo?fmt(n(r.odo)):''}</td><td>${r.liters?fmt(n(r.liters)):''}</td><td>${r.kmpl}</td><td>${fmt(r.exp)}</td><td>${fmt(r.cost)}</td><td>${esc(r.flags)}</td></tr>`).join('')||'<tr><td colspan="9">لا توجد نقلات في الفترة</td></tr>'}</table></div>`;
+  const text=`تقرير ${dn}\n${period}\nالعهدة المستلمة: ${fmt(recv)}\nإجمالي المصاريف: ${fmt(exp)}\nاللترات: ${fmt(liters)}\nالمسافة: ${fmt(km)} كم`+(L?`\nمتوسط الاستهلاك: ${fmt(+(km/L).toFixed(2))} كم/لتر`:'')+(bal?`\nالمتبقي الحالي: ${fmt(bal.b)}`:'')+'\n'+Object.entries(byCat).map(([k,v])=>`• ${k}: ${fmt(v)}`).join('\n');
+  rep={html,text,tr,name:dn};return rep;
+}
+function csvOf(r){
+  const head=['التاريخ','السائق','العربية','قراءة العداد','لترات','كم/لتر','مبلغ التفويلة','المصاريف','إجمالي المخصوم','البنود','تنبيهات'];
+  const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+  return '\ufeff'+[head].concat(r.tr.map(x=>[x.date,x.driver,x.car,x.odo,x.liters,x.kmpl,x.fuelAmt,x.exp,x.cost,x.det,x.flags])).map(l=>l.map(q).join(',')).join('\r\n');
+}
+$('v-more').addEventListener('click',async e=>{
+  const t=e.target,id=t.id;
+  if(t.dataset.pre!==undefined){const p=t.dataset.pre;if(p==='all'){$('rFrom').value='';$('rTo').value=''}else{const [f,to]=monthRange(+p);$('rFrom').value=f;$('rTo').value=to}return}
+  if(id==='rShow'){buildReport();$('repOut').innerHTML=rep.html+`<div class="row" style="margin-top:10px"><button class="btn sm" id="rPrint">طباعة / PDF</button><button class="btn sm" id="rCsv">Excel (CSV)</button><button class="btn amber sm" id="rWa">واتساب</button></div>`;return}
+  if(id==='rPrint'&&rep){$('printArea').innerHTML=rep.html.replace(/class="scroll"/g,'');setTimeout(()=>window.print(),50);return}
+  if(id==='rCsv'&&rep){download(new Blob([csvOf(rep)],{type:'text/csv;charset=utf-8'}),'تقرير-'+today()+'.csv');return}
+  if(id==='rWa'&&rep){window.open('https://wa.me/?text='+encodeURIComponent(rep.text),'_blank');return}
+  /* cars */
+  if(id==='addCar'){const nm=$('newCar').value.trim();if(!nm)return;await ensureCar(nm);renderMore();renderCarList();return}
+  if(t.dataset.delcar&&confirm('حذف العربية؟ النقلات القديمة تفضل في السجل.')){await del('cars',t.dataset.delcar);cars=cars.filter(c=>c.id!==t.dataset.delcar);renderAll();return}
+  /* cats */
+  if(id==='saveCats'){const l=$('catsTxt').value.split('\n').map(x=>x.trim()).filter(Boolean);localStorage.setItem('cats',JSON.stringify(l));renderItems();renderMore();schedulePublish();toast('تم حفظ التصنيفات');return}
+  /* limits */
+  if(id==='saveLim'){localStorage.setItem('thr',String(n($('limThr').value)||20));localStorage.setItem('maxKm',String(n($('limKm').value)||1500));localStorage.setItem('lowCust',String(n($('limLow').value)));localStorage.setItem('priceThr',String(n($('limPrice').value)||50));localStorage.setItem('idleDays',String(n($('limIdle').value)));localStorage.setItem('showBal',$('limBal').checked?'1':'0');renderAll();toast('تم حفظ الحدود');return}
+  /* pin / backup */
+  if(id==='savePin'){const p=$('pinIn').value.trim();if(p)localStorage.setItem('pin',p);else localStorage.removeItem('pin');toast('تم حفظ الرمز');return}
+  if(id==='bkFull'){makeBackup(true);return}
+  if(id==='bkLite'){makeBackup(false);return}
+  if(id==='rsMerge'||id==='rsReplace'){restoreMode=id==='rsReplace'?'replace':'merge';$('rsFile').click();return}
+  /* sync */
+  if(id==='saveNotif'){localStorage.setItem('notify',$('ntOn').checked?'1':'0');const u=$('ntUrl').value.trim();if(/^https?:\/\//.test(u))localStorage.setItem('ntfyUrl',u);schedulePublish();toast('تم الحفظ');return}
+  if(id==='testNotif'){let k=0;for(const d of drivers){if(!d.token)continue;if(await ntfySend(S.ntfyUrl,topicOf(d.token),{title:'اختبار',message:'الإشعارات شغّالة ✓ — '+d.name,tags:['white_check_mark']}))k++}toast(k?`اتبعت ${k} إشعار تجريبي — شوفهم على موبايلك`:'تعذر الإرسال',4000);return}
+  if(id==='copyRules'){try{await navigator.clipboard.writeText($('rulesTxt').textContent);toast('تم النسخ')}catch(x){toast('انسخ النص يدويًا')}return}
+  if(id==='saveSync'||id==='testSync'){
+    const u=$('syncUrl').value.trim();
+    if(!/^https:\/\//.test(u)&&!/^http:\/\/(127\.0\.0\.1|localhost)/.test(u)){toast('اكتب رابط قاعدة البيانات (https)',4000);return}
+    localStorage.setItem('sync',JSON.stringify({u}));
+    try{await api('/ping','PUT',Date.now(),'_test');await api('','DELETE',undefined,'_test');toast('الاتصال شغّال ✓');renderSync();renderNotif();pollAdmin(true)}catch(x){toast('تعذر الاتصال — راجع الرابط والقواعد',5000)}
+    return;
+  }
+  if(id==='offSync'){localStorage.removeItem('sync');renderSync();renderLog();toast('تم إيقاف المزامنة')}
+});
+$('v-more').addEventListener('change',async e=>{
+  const t=e.target;
+  if(t.id==='rsFile'){const f=t.files[0];t.value='';if(f)doRestore(f,restoreMode);return}
+  if(t.dataset.ctank!==undefined){const c=cars.find(x=>x.id===t.dataset.ctank);c.tank=n(t.value)||'';await put('cars',c);renderLog();schedulePublish();toast('تم الحفظ');return}
+  if(t.dataset.cexp!==undefined){const c=cars.find(x=>x.id===t.dataset.cexp);c.expected=n(t.value)||'';await put('cars',c);renderCons();renderLog();toast('تم الحفظ')}
+});
+function renderMore(){
+  if(MODE!=='admin')return;
+  renderRepForm();
+  $('carsBox').innerHTML=(cars.length?cars.map(c=>`<div class="r" style="display:block;margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center"><b>${esc(c.name)}</b><button class="btn ghost sm" data-delcar="${c.id}">✕</button></div><div class="row" style="margin-top:6px"><input type="number" inputmode="decimal" placeholder="كم/لتر متوقع" value="${c.expected||''}" data-cexp="${c.id}"><input type="number" inputmode="decimal" placeholder="سعة الخزان (لتر)" value="${c.tank||''}" data-ctank="${c.id}"></div></div>`).join(''):'<div class="empty">لا توجد عربيات بعد — بتتضاف تلقائيًا من النقلات.</div>')+`<div class="row" style="margin-top:8px"><input type="text" id="newCar" placeholder="عربية جديدة"><button class="btn sm" id="addCar" style="flex:0 0 auto">إضافة</button></div><small class="h">المعدل المتوقع اختياري؛ لو فاضي بيقارن بمتوسط نقلات نفس العربية. سعة الخزان بتنبّهك لو تفويلة لتراتها أكبر من الخزان.</small>`;
+  $('catsBox').innerHTML=`<textarea id="catsTxt" style="min-height:140px">${esc(cats().join('\n'))}</textarea><small class="h">تصنيف في كل سطر. "أخرى" بتفضل موجودة دايمًا.</small><button class="btn full" style="margin-top:8px" id="saveCats">حفظ التصنيفات</button>`;
+  $('limBox').innerHTML=`<div class="row"><div><label class="f" style="margin-top:0">حد تنبيه الاستهلاك ٪</label><input type="number" id="limThr" value="${S.thr}"></div><div><label class="f" style="margin-top:0">أقصى مسافة للنقلة (كم)</label><input type="number" id="limKm" value="${S.maxKm}"></div></div>
+  <label class="f">تنبيه لما متبقي العهدة أقل من (٠ = بدون)</label><input type="number" id="limLow" value="${S.lowCust}">
+  <label class="f">تنبيه لما سائق ما يبعتش نقلة لمدة (أيام، ٠ = بدون)</label><input type="number" id="limIdle" value="${S.idleDays}">
+  <label class="f">تنبيه لما سعر بند يزيد عن المعتاد بنسبة ٪</label><input type="number" id="limPrice" value="${S.priceThr}">
+  <small class="h">${Object.keys(priceStats()).length?'الأسعار المعتادة (الوسيط): '+Object.entries(priceStats()).map(([k,v])=>`${esc(k)} ${fmt(v.med)}`).join(' • '):'الأسعار المعتادة بتتحسب تلقائيًا بعد ٥ عمليات معتمدة لكل بند.'}</small>
+  <label style="display:flex;gap:8px;align-items:center;margin-top:10px"><input type="checkbox" id="limBal" ${S.showBal?'checked':''}> إظهار رصيد العهدة للسائق (يحتاج مزامنة)</label>
+  <button class="btn full" style="margin-top:10px" id="saveLim">حفظ الحدود</button>`;
+  renderSync();renderNotif();
+  $('pinBox').innerHTML=`<label class="f" style="margin-top:0">رمز المدير (للرجوع لوضع المدير)</label><div class="row"><input type="text" inputmode="numeric" id="pinIn" value="${esc(localStorage.getItem('pin')||'')}"><button class="btn sm" id="savePin" style="flex:0 0 auto">حفظ</button></div><hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+  <b>النسخ الاحتياطي</b><small class="h">${+localStorage.getItem('lastBackup')?'آخر نسخة: '+new Date(+localStorage.getItem('lastBackup')).toLocaleDateString('ar-EG',{day:'numeric',month:'long'}):'لم تُؤخذ نسخة بعد'}</small>
+  <button class="btn full" style="margin-top:8px" id="bkFull">نسخة كاملة (مع الصور)</button>
+  <button class="btn ghost full" style="margin-top:8px" id="bkLite">نسخة خفيفة (بدون صور)</button>
+  <div class="row" style="margin-top:8px"><button class="btn ghost" id="rsMerge">استعادة (دمج)</button><button class="btn red" id="rsReplace">استعادة (استبدال)</button></div>
+  <input type="file" id="rsFile" accept=".json,application/json" hidden>
+  <small class="h">الدمج بيضيف الناقص بس ومش بيمسح حاجة. الاستبدال بيمسح بيانات الجهاز الحالية ويحط النسخة مكانها.</small>`;
+}
+function renderNotif(){
+  if(!syncOn()){$('notifBox').innerHTML='<small class="h" style="margin-top:0">فعّل المزامنة أولًا (القسم اللي تحت)، لأن الإشعار بيتبعت لما نقلة توصل للسيرفر.</small>';return}
+  $('notifBox').innerHTML=`<label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="ntOn" ${S.notify?'checked':''}> إرسال إشعار لموبايلي لما تيجي نقلة أو تنبيه</label>
+  <small class="h">الإشعار بيوصل عن طريق تطبيق ntfy المجاني على موبايلك (حتى لو التطبيق مقفول). ثبّت تطبيق <b>ntfy</b> من Play Store، واشترك في موضوع كل سائق (+ ثم اكتب الاسم):</small>
+  ${drivers.map(d=>`<div style="margin-top:6px"><b>${esc(d.name)}</b><pre class="code">${d.token?esc(topicOf(d.token)):'(بيتولّد مع أول مزامنة أو كود QR)'}</pre></div>`).join('')||'<small class="h">أضف سائقًا أولًا.</small>'}
+  <label class="f">سيرفر ntfy</label><input type="text" id="ntUrl" value="${esc(S.ntfyUrl)}" style="direction:ltr">
+  <div class="row" style="margin-top:10px"><button class="btn" id="saveNotif">حفظ</button><button class="btn amber" id="testNotif">إشعار تجريبي</button></div>
+  <small class="h">لكل سائق موضوع سرّي خاص بيه، عشان محدش يشوف إشعارات غيره. محتوى الإشعار (اسم السائق والعربية والعداد والتنبيه) بيعدّي على سيرفر ntfy.</small>`;
+}
+const RULES='{\n  "rules": {\n    ".read": false,\n    ".write": false,\n    "dv": {\n      "$t": { ".read": true, ".write": true }\n    }\n  }\n}';
+function renderSync(){
+  const c=cfg()||{};
+  $('syncBox').innerHTML=`<small class="h" style="margin-top:0">بتخلّي نقلات السائق توصلك فورًا من غير واتساب، وتبعت للسائق حالة نقلته. محتاج قاعدة Firebase Realtime Database مجانية.</small>
+  <label class="f">رابط قاعدة البيانات</label><input type="text" id="syncUrl" placeholder="https://اسم-المشروع-default-rtdb.firebaseio.com" value="${esc(c.u||'')}" style="direction:ltr">
+  <div class="row" style="margin-top:10px"><button class="btn" id="saveSync">حفظ واختبار</button>${c.u?'<button class="btn ghost" id="offSync">إيقاف</button>':''}</div>
+  <small class="h">كل سائق بياخد كود سرّي خاص بيه جوه الـ QR بتاعه، فمحدش بيشوف بيانات غيره. بعد الحفظ (أو لو كنت مفعّلها قبل كده بنسخة قديمة) أعد إنشاء كود QR لكل سائق.</small>
+  <b style="display:block;margin-top:12px">قواعد الأمان (الصقها في Firebase ← Realtime Database ← Rules):</b>
+  <pre class="code" id="rulesTxt">${esc(RULES)}</pre><button class="btn ghost sm" id="copyRules">نسخ القواعد</button>`;
+}
+
+/* ================= backup / restore ================= */
+const SETTING_KEYS=['cats','idleDays','priceThr','thr','maxKm','lowCust','showBal','notify','ntfyUrl','sync','appUrl'];
+let restoreMode='merge';
+async function makeBackup(withPhotos){
+  toast('جارِ تجهيز النسخة…');
+  const parts=['{"app":"yomia-backup","v":3,"date":'+JSON.stringify(new Date().toISOString())+',"withPhotos":'+withPhotos+',"settings":'];
+  const st={};SETTING_KEYS.forEach(k=>{const v=localStorage.getItem(k);if(v!==null)st[k]=v});
+  parts.push(JSON.stringify(st),',"drivers":'+JSON.stringify(drivers),',"custody":'+JSON.stringify(custody),',"cars":'+JSON.stringify(cars),',"closings":'+JSON.stringify(closings),',"trips":[');
+  let first=true;
+  for(const t of trips){
+    const o={...t};delete o.odoImg;delete o.fuelImg;delete o.expImg;delete o.voice;
+    if(t.pendingExp)o.pendingExp={...t.pendingExp,expImg:null};
+    if(t.expAdd)o.expAdd={...t.expAdd,expImg:null};
+    if(withPhotos){o.images={};for(const k of ['odoImg','fuelImg','expImg','voice'])if(t[k])o.images[k]=await blobToData(t[k]);
+      if(t.pendingExp&&t.pendingExp.expImg)o.images.pendExpImg=await blobToData(t.pendingExp.expImg);
+      if(t.expAdd&&t.expAdd.expImg)o.images.expAddImg=await blobToData(t.expAdd.expImg)}
+    parts.push((first?'':',')+JSON.stringify(o));first=false;
+  }
+  parts.push(']}');
+  download(new Blob(parts,{type:'application/json'}),'yomia-backup-'+today()+(withPhotos?'':'-lite')+'.json');
+  localStorage.setItem('lastBackup',String(Date.now()));renderMore();renderLog();
+  toast('تم حفظ النسخة — احتفظ بها في Drive أو ابعتها لنفسك',5000);
+}
+function clearStore(s){return new Promise((res,rej)=>{const t=db.transaction(s,'readwrite');t.objectStore(s).clear();t.oncomplete=res;t.onerror=()=>rej(t.error)})}
+async function doRestore(file,mode){
+  let j;
+  try{j=JSON.parse(await file.text())}catch(e){toast('الملف غير صالح');return}
+  if(!j||!(j.app==='yomia-backup'||Array.isArray(j.trips))){toast('ده مش ملف نسخة احتياطية');return}
+  const cnt=`${(j.trips||[]).length} نقلة، ${(j.drivers||[]).length} سائق`;
+  if(mode==='replace'){if(!confirm('سيتم مسح بيانات هذا الجهاز واستبدالها بالنسخة ('+cnt+'). متأكد؟'))return}
+  else if(!confirm('دمج النسخة ('+cnt+') مع البيانات الحالية؟'))return;
+  try{
+    if(mode==='replace')for(const s of STORES)await clearStore(s);
+    const have={};for(const s of STORES)have[s]=new Set(mode==='replace'?[]:(await all(s)).map(x=>x.id));
+    let added=0;
+    for(const s of ['drivers','custody','cars','closings'])for(const r of (j[s]||[]))if(!have[s].has(r.id)){await put(s,r)}
+    for(const o of (j.trips||[])){
+      if(have.trips.has(o.id))continue;
+      const t={...o};
+      if(o.images){for(const [k,u] of Object.entries(o.images)){const bl=await (await fetch(u)).blob();
+        if(k==='pendExpImg'&&t.pendingExp)t.pendingExp.expImg=bl;else if(k==='expAddImg'&&t.expAdd)t.expAdd.expImg=bl;else t[k]=bl}delete t.images}
+      await put('trips',t);added++;
+    }
+    if(j.settings)for(const [k,v] of Object.entries(j.settings))if(mode==='replace'||localStorage.getItem(k)===null)localStorage.setItem(k,v);
+    await load();renderItems();toast(`تمت الاستعادة — أُضيفت ${added} نقلة`,5000);
+  }catch(e){toast('تعذرت الاستعادة: '+(e&&e.message||''),6000)}
+}
+
+/* ================= notifications (ntfy) ================= */
+const cyrb53=(str,seed=0)=>{let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0;i<str.length;i++){const ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}
+  h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)};
+const topicOf=k=>'yomia-'+cyrb53(k+'|ntfy').toString(36);
+async function ntfySend(url,topic,o){
+  try{const r=await fetch(url.replace(/\/+$/,'')+'/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic,...o})});return r.ok}catch(e){return false}
+}
+function priceAlert(its){
+  let pr=[],th=50;try{pr=JSON.parse(localStorage.getItem('cfgPrices')||'[]');th=n(localStorage.getItem('cfgPriceThr'))||50}catch(e){}
+  for(const i of (its||[])){const p=pr.find(x=>x.c===i.cat);if(p&&n(i.amount)>p.m*(1+th/100))return `${i.cat} ${fmt(n(i.amount))} أعلى من المعتاد (${fmt(p.m)})`}
+  return '';
+}
+function quickAlert(t){
+  let info=[],thr=20,maxKm=1500;
+  try{info=JSON.parse(localStorage.getItem('cfgCarInfo')||'[]');thr=n(localStorage.getItem('cfgThr'))||20;maxKm=n(localStorage.getItem('cfgMaxKm'))||1500}catch(e){}
+  const odo=n(t.odo),L=n(t.liters),cn=t.carName||'';
+  const ci=info.find(x=>x.n===cn);
+  if(ci&&ci.tank&&L>ci.tank*1.02)return 'لترات التفويلة أكبر من سعة الخزان';
+  if(!odo)return t.liters?'تفويلة بدون قراءة عداد':'';
+  const own=Math.max(0,...trips.filter(x=>x.id!==t.id&&(x.carName||'')===cn&&n(x.odo)>0&&n(x.odo)<odo).map(x=>n(x.odo)));
+  const last=Math.max(ci?ci.odo||0:0,own);
+  if(!last)return '';
+  const km=odo-last;
+  if(km<=0)return 'قراءة العداد أقل من أو تساوي آخر قراءة للعربية';
+  if(km>maxKm)return `المسافة ${fmt(km)} كم أكبر من الحد`;
+  if(L>0&&ci&&ci.base){const dev=(km/L-ci.base)/ci.base*100;
+    if(dev<-thr)return `استهلاك أعلى من المعتاد (${Math.round(Math.abs(dev))}٪)`;
+    if(dev>thr)return 'استهلاك أقل من المعتاد — راجع القراءات'}
+  return '';
+}
+async function notifyExp(t){
+  let nf;try{nf=JSON.parse(localStorage.getItem('cfgNotify')||'null')}catch(e){}
+  if(!nf||!nf.on||!nf.topic)return;
+  const total=(t.expAdd.items||[]).reduce((s,i)=>s+n(i.amount),0);
+  const al=priceAlert(t.expAdd.items);
+  await ntfySend(nf.url||'https://ntfy.sh',nf.topic,{title:al?'⚠ مصاريف نقلة بتنبيه':'مصاريف نقلة',message:`${drvName(t.driverId)} • ${t.carName||'بدون عربية'} • نقلة ${t.date}${total?' • مصاريف '+total:''}`+(al?'\n⚠ '+al:''),priority:al?4:3,tags:[al?'warning':'receipt'],click:location.origin+location.pathname});
+}
+async function notifyAdmin(t){
+  let nf;try{nf=JSON.parse(localStorage.getItem('cfgNotify')||'null')}catch(e){}
+  if(!nf||!nf.on||!nf.topic)return;
+  const al=quickAlert(t)||priceAlert(t.items),total=(t.items||[]).reduce((s,i)=>s+n(i.amount),0);
+  await ntfySend(nf.url||'https://ntfy.sh',nf.topic,{
+    title:al?'⚠ نقلة جديدة بتنبيه':'نقلة جديدة',
+    message:`${drvName(t.driverId)} • ${t.carName||'بدون عربية'}${t.odo?' • عداد '+t.odo:''}${total?' • مصاريف '+total:''}`+(al?'\n⚠ '+al:''),
+    priority:al?4:3,tags:[al?'warning':'truck'],click:location.origin+location.pathname});
+}
+/* ================= sync (Firebase Realtime Database REST) ================= */
+const cfg=()=>{try{return JSON.parse(localStorage.getItem('sync'))}catch(e){return null}};
+const syncOn=()=>{const c=cfg();return !!(c&&c.u)};
+const base=tok=>{const c=cfg();const t=tok||(c&&c.t);return c&&c.u&&t?c.u.replace(/\/+$/,'')+'/dv/'+encodeURIComponent(t):null};
+async function api(path,method='GET',body,tok){
+  const b=base(tok);if(!b)throw new Error('nosync');
+  const r=await fetch(b+path+'.json',{method,body:body!==undefined?JSON.stringify(body):undefined});
+  if(!r.ok)throw new Error('http '+r.status);
+  return r.json();
+}
+async function tokenOf(d){if(!d.token){d.token=uid()+uid()+uid()+Math.random().toString(36).slice(2,8);await put('drivers',d)}return d.token}
+const tokOfId=id=>(drivers.find(d=>d.id===id)||{}).token;
+const setAck=(id,v,driverId)=>{const tk=tokOfId(driverId);if(tk&&syncOn())api('/acks/'+id,'PUT',v,tk).catch(()=>{})};
+async function tripPacket(t){
+  return {id:t.id,driverId:t.driverId,driverName:drvName(t.driverId),carName:carName(t),date:t.date,note:t.note,odo:t.odo,liters:t.liters,items:t.items,
+    exif:t.exif||null,ocr:t.ocr||null,loc:t.loc||null,stamped:!!t.stamped,expLater:!!t.expLater,quality:t.quality||null,voice:t.voice?await blobToData(t.voice):null,createdAt:t.createdAt,
+    imgs:{odo:t.odoImg?await blobToData(t.odoImg):null,fuel:t.fuelImg?await blobToData(t.fuelImg):null,exp:t.expImg?await blobToData(t.expImg):null}};
+}
+async function expPacket(t){
+  const e=t.expAdd;
+  return {id:t.id+'x',tripId:t.id,driverId:t.driverId,driverName:drvName(t.driverId),carName:carName(t),date:t.date,createdAt:e.createdAt,items:e.items,exif:e.exif||null,loc:e.loc||null,quality:e.quality||null,img:e.expImg?await blobToData(e.expImg):null};
+}
+const normItems=arr=>{const cl=cats();return (arr||[]).map(i=>i.cat?{cat:i.cat,name:i.name||'',amount:i.amount}:{cat:cl.includes(i.name)?i.name:'أخرى',name:cl.includes(i.name)?'':(i.name||''),amount:i.amount})};
+function applyExp(t,e){
+  t.items=(t.items||[]).concat(e.items||[]);
+  if(e.expImg&&!t.expImg){t.expImg=e.expImg;t.hash={...(t.hash||{}),exp:e.hash};t.exif={...(t.exif||{}),exp:e.exif};t.loc={...(t.loc||{}),exp:e.loc};t.quality={...(t.quality||{}),exp:e.quality||null}}
+  t.expLater=false;delete t.pendingExp;
+}
+async function importExp(p,dv){
+  if(!p||!p.tripId)return 'bad';
+  const t=trips.find(x=>x.id===p.tripId);
+  if(!t)return 'notrip';
+  if(dv&&t.driverId!==dv.id)return 'bad';
+  if(t.expRef&&t.expRef===p.createdAt)return 'dup';
+  const img=p.img?await (await fetch(p.img)).blob():null;
+  const add={items:normItems(p.items),expImg:img,hash:img?await imgHash(img):'',exif:p.exif||null,loc:p.loc||null,quality:p.quality||null,createdAt:p.createdAt};
+  t.expRef=p.createdAt;
+  if(t.status==='pending'){applyExp(t,add);t.expState='applied'}else{t.pendingExp=add;t.expState='pending'}
+  await put('trips',t);return 'ok';
+}
+const expAckOf=t=>!t?'received':(t.expState==='approved'?'approved':(t.expState==='rejected'?'rejected':'received'));
+async function importPacket(p,dv){
+  if(!p||!p.id)return 'bad';
+  if(trips.some(x=>x.id===p.id))return 'dup';
+  let d=dv||drivers.find(x=>x.id===p.driverId)||drivers.find(x=>x.name===p.driverName);
+  if(!d){d={id:p.driverId||uid(),name:p.driverName||'سائق'};await put('drivers',d);drivers.push(d)}
+  const carId=await ensureCar(p.carName);
+  const bl=async u=>u?await (await fetch(u)).blob():null;
+  const odoImg=await bl(p.imgs&&p.imgs.odo),fuelImg=await bl(p.imgs&&p.imgs.fuel),expImg=await bl(p.imgs&&p.imgs.exp);
+  const cl=cats();
+  const its=(p.items||[]).map(i=>i.cat?{cat:i.cat,name:i.name||'',amount:i.amount}:{cat:cl.includes(i.name)?i.name:'أخرى',name:cl.includes(i.name)?'':(i.name||''),amount:i.amount});
+  const t={id:p.id,driverId:d.id,carId,date:p.date,note:p.note||'',odo:p.odo||'',liters:p.liters||'',fuelAmt:'',fuelDeduct:false,items:its,
+    odoImg,fuelImg,expImg,voice:await bl(p.voice),quality:p.quality||null,hash:{odo:odoImg?await imgHash(odoImg):'',fuel:fuelImg?await imgHash(fuelImg):'',exp:expImg?await imgHash(expImg):''},
+    exif:p.exif||null,ocr:p.ocr||null,loc:p.loc||null,stamped:!!p.stamped,expLater:!!p.expLater,createdAt:p.createdAt||Date.now(),fromDriver:true,status:'pending'};
+  await put('trips',t);trips.push(t);
+  if(!cur)cur=d.id;
+  return 'ok';
+}
+let polling=false;
+async function pollAdmin(manual){
+  if(MODE!=='admin'||!syncOn()||polling)return;polling=true;
+  try{
+    let c=0,fails=0;
+    for(const d of drivers){
+      const tok=await tokenOf(d);
+      let inbox;try{inbox=await api('/inbox','GET',undefined,tok)}catch(e){fails++;continue}
+      if(!inbox)continue;
+      for(const [id,pk] of Object.entries(inbox)){
+        if(pk&&pk.exp){
+          const r=await importExp(pk.exp,d).catch(()=>'bad');
+          if(r==='ok'||r==='dup'){await api('/acks/'+id,'PUT',r==='ok'?'received':expAckOf(trips.find(x=>x.id===pk.exp.tripId)),tok);await api('/inbox/'+id,'DELETE',undefined,tok);if(r==='ok')c++}
+          continue;
+        }
+        const r=await importPacket(pk.trip||pk,d).catch(()=>'bad');
+        if(r==='ok'||r==='dup'){const t=trips.find(x=>x.id===id);await api('/acks/'+id,'PUT',t&&t.status==='approved'?'approved':'received',tok);await api('/inbox/'+id,'DELETE',undefined,tok);if(r==='ok')c++}
+      }
+    }
+    syncMsg=fails?'تعذر الاتصال بجزء من السائقين':'آخر تحديث '+new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
+    if(c){renderAll();toast('وصلت '+c+' نقلة / مصاريف جديدة',4000)}else{renderDash();if(manual){renderLog();toast('لا توجد نقلات جديدة')}else renderLogList()}
+    await publish();
+  }catch(e){syncMsg='تعذر الاتصال بالسيرفر';renderLog()}
+  polling=false;
+}
+let pubT=null;
+function schedulePublish(){if(MODE!=='admin'||!syncOn())return;clearTimeout(pubT);pubT=setTimeout(()=>publish().catch(()=>{}),1500)}
+async function publish(){
+  if(MODE!=='admin'||!syncOn())return;
+  const info=[];consCalc(trips).groups.forEach((rs,k)=>{const car=cars.find(c=>c.id===k);if(!car)return;
+    const valid=rs.filter(r=>r.kmpl).map(r=>r.kmpl);
+    info.push({n:car.name,tank:n(car.tank)||0,odo:Math.max(0,...rs.map(r=>r.odo)),base:n(car.expected)>0?n(car.expected):(valid.length>=2?median(valid):null)})});
+  const conf={cars:cars.map(c=>c.name),cats:cats(),showBal:S.showBal,thr:S.thr,maxKm:S.maxKm,carInfo:info,prices:Object.entries(priceStats()).map(([k,v])=>({c:k,m:v.med})),priceThr:S.priceThr};
+  for(const d of drivers){
+    const tok=await tokenOf(d),a=account(d.id);
+    await api('/config','PUT',{...conf,notify:{on:S.notify,url:S.ntfyUrl,topic:topicOf(tok)}},tok);
+    await api('/balance','PUT',{name:d.name,custody:a.c,spent:a.e,remaining:a.b,ts:Date.now()},tok);
+  }
+}
+async function pollDriver(){
+  if(MODE!=='driver'||!base()||polling)return;polling=true;
+  try{
+    const conf=await api('/config');
+    if(conf){
+      localStorage.setItem('cfgCars',JSON.stringify(conf.cars||[]));if(conf.cats)localStorage.setItem('cats',JSON.stringify(conf.cats));
+      localStorage.setItem('showBalSrv',conf.showBal?'1':'0');localStorage.setItem('cfgCarInfo',JSON.stringify(conf.carInfo||[]));
+      localStorage.setItem('cfgThr',String(conf.thr||20));localStorage.setItem('cfgMaxKm',String(conf.maxKm||1500));localStorage.setItem('cfgNotify',JSON.stringify(conf.notify||null));localStorage.setItem('cfgPrices',JSON.stringify(conf.prices||[]));localStorage.setItem('cfgPriceThr',String(conf.priceThr||50));
+    }
+    for(const t of trips.filter(x=>x.sync==='pending')){
+      await api('/inbox/'+t.id,'PUT',{ts:Date.now(),trip:await tripPacket(t)});
+      t.sync='uploaded';await put('trips',t);
+      notifyAdmin(t);
+    }
+    for(const t of trips.filter(x=>x.expSync==='pending'&&x.expAdd)){
+      await api('/inbox/'+t.id+'x','PUT',{ts:Date.now(),exp:await expPacket(t)});
+      t.expSync='uploaded';await put('trips',t);
+      notifyExp(t);
+    }
+    const acks=(await api('/acks'))||{};
+    for(const t of trips){
+      const a=acks[t.id],b2=acks[t.id+'x'];let ch=false;
+      if(a&&t.ack!==a){t.ack=a;ch=true}
+      if(b2&&t.expAck!==b2){t.expAck=b2;ch=true}
+      if(ch)await put('trips',t);
+    }
+    const bal=await api('/balance');
+    if(bal)localStorage.setItem('bal',JSON.stringify(bal));
+    renderSent();renderCarList();renderItems();
+  }catch(e){}
+  polling=false;
+}
+const pollAll=()=>MODE==='admin'?pollAdmin():pollDriver();
+setInterval(pollAll,20000);
+window.addEventListener('online',pollAll);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)pollAll()});
+
+/* ================= driver extras ================= */
+async function sendFile(t){
+  const body=JSON.stringify({v:2,app:'yomia',trip:await tripPacket(t)});
+  const file=new File([body],'trip-'+t.date+'-'+t.id+'.txt',{type:'text/plain'});
+  const text='نقلة السائق '+drvName(t.driverId)+' بتاريخ '+t.date+' (افتح الملف داخل التطبيق: استيراد)';
+  try{
+    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});toast('اختر المدير من القائمة لإرسال النقلة');return}
+  }catch(e){if(e.name==='AbortError'){toast('لم يتم الإرسال — اضغط إعادة الإرسال من القائمة');return}}
+  download(file,file.name);toast('تم حفظ ملف النقلة — أرسله للمدير على واتساب',5000);
+}
+async function sendExpFile(t){
+  const body=JSON.stringify({v:2,app:'yomia',exp:await expPacket(t)});
+  const file=new File([body],'exp-'+t.date+'-'+t.id+'.txt',{type:'text/plain'});
+  const text='مصاريف نقلة السائق '+drvName(t.driverId)+' بتاريخ '+t.date+' (افتح الملف داخل التطبيق: استيراد)';
+  try{
+    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});toast('اختر المدير من القائمة لإرسال المصاريف');return}
+  }catch(e){if(e.name==='AbortError'){toast('لم يتم الإرسال — اضغط إعادة إرسال المصاريف');return}}
+  download(file,file.name);toast('تم حفظ ملف المصاريف — أرسله للمدير على واتساب',5000);
+}
+function expLabel(t){
+  if(t.expAck==='approved')return ['المصاريف معتمدة ✓','good'];
+  if(t.expAck==='rejected')return ['المصاريف مرفوضة ✗','bad'];
+  if(t.expAck==='received')return ['المدير استلم المصاريف',''];
+  if(t.expSync==='uploaded')return ['المصاريف وصلت للسيرفر',''];
+  if(t.expSync==='pending')return ['المصاريف بانتظار الإرسال (لا يوجد اتصال)','warn'];
+  return ['المصاريف أُرسلت يدويًا',''];
+}
+function sentLabel(t){
+  if(t.ack==='approved')return ['معتمدة ✓','good'];
+  if(t.ack==='rejected')return ['مرفوضة ✗','bad'];
+  if(t.ack==='received')return ['استلمها المدير',''];
+  if(t.sync==='uploaded')return ['وصلت للسيرفر',''];
+  if(t.sync==='pending')return ['بانتظار الإرسال (لا يوجد اتصال)','warn'];
+  return ['أُرسلت يدويًا',''];
+}
+function renderSent(){
+  if(MODE!=='driver')return;
+  $('drvName').textContent=drvName(cur);
+  const list=trips.filter(t=>t.driverId===cur).sort((a,b)=>b.date.localeCompare(a.date)||(b.createdAt||0)-(a.createdAt||0)).slice(0,15);
+  $('v-sent').innerHTML=list.length?'<div class="card lst"><h2>نقلاتي المُرسلة</h2>'+list.map(t=>{
+    const [l,c]=sentLabel(t),needExp=!t.expAdd&&!(t.items||[]).length&&!t.expImg;
+    const eb=t.expAdd?(()=>{const [el,ec]=expLabel(t);return `<br><span class="badge ${ec}">${el}</span>`})():(needExp?'<br><span class="badge warn">المصاريف لسه ما اتسجلتش</span>':'');
+    const btn=[];
+    if(needExp)btn.push(`<button class="btn amber sm" data-addexp="${t.id}">＋ المصاريف</button>`);
+    if(base()){if(t.sync==='pending'||t.expSync==='pending')btn.push('<button class="btn ghost sm" data-retry="1">إعادة المحاولة</button>')}
+    else{btn.push(`<button class="btn ghost sm" data-resend="${t.id}">إعادة إرسال النقلة</button>`);if(t.expAdd)btn.push(`<button class="btn ghost sm" data-resendexp="${t.id}">إعادة إرسال المصاريف</button>`)}
+    return `<div class="r"><span>${dfmt(t.date)}${t.odo?' — '+fmt(n(t.odo))+' كم':''}<br><span class="badge ${c}">${l}</span>${eb}</span><div style="display:flex;flex-direction:column;gap:6px">${btn.join('')}</div></div>`}).join('')+'</div>':'';
+  $('adminLink').innerHTML=localStorage.getItem('pin')?'<button class="btn ghost sm" id="goAdmin">دخول المدير</button>':'';
+  let bx='';
+  if(localStorage.getItem('showBalSrv')==='1'){try{const b=JSON.parse(localStorage.getItem('bal'));if(b)bx=`<div class="card"><div class="bal"><div><small>العهدة</small><b>${fmt(b.custody)}</b></div><div><small>المصاريف</small><b>${fmt(b.spent)}</b></div><div><small>المتبقي</small><b class="${b.remaining<0?'neg':'pos'}">${fmt(b.remaining)}</b></div></div></div>`}catch(e){}}
+  $('balBox').innerHTML=bx;
+}
+$('v-sent').addEventListener('click',e=>{
+  if(e.target.dataset.retry){pollDriver();return}
+  const id=e.target.dataset.resend;if(id){const t=trips.find(x=>x.id===id);if(t)sendFile(t)}
+  const ie=e.target.dataset.resendexp;if(ie){const t=trips.find(x=>x.id===ie);if(t&&t.expAdd)sendExpFile(t)}
+  const ia=e.target.dataset.addexp;if(ia)enterAdd(ia);
+});
+$('adminLink').addEventListener('click',e=>{
+  if(e.target.id==='goAdmin'){const p=prompt('رمز المدير');if(p&&p===localStorage.getItem('pin')){localStorage.setItem('mode','admin');location.reload()}else if(p)toast('الرمز غير صحيح')}
+});
+async function importFiles(files){
+  let ok=0,dup=0,bad=0,miss=0;
+  for(const f of files){
+    try{const j=JSON.parse(await f.text());if(j.app!=='yomia')throw 0;
+      if(j.exp){const r=await importExp(j.exp);if(r==='ok')ok++;else if(r==='dup')dup++;else if(r==='notrip')miss++;else bad++}
+      else if(j.trip){const r=await importPacket(j.trip);if(r==='ok')ok++;else if(r==='dup')dup++;else bad++}
+      else throw 0}
+    catch(e){bad++}
+  }
+  renderAll();
+  toast(`تم استيراد ${ok}`+(dup?` • مكرر ${dup}`:'')+(miss?` • مصاريف لنقلة لم تُستورد بعد (استورد ملف النقلة أولًا) ${miss}`:'')+(bad?` • ملف غير صالح ${bad}`:''),5000);
+}
+
+/* ================= nav ================= */
+function show(v){
+  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  if(v==='dash')renderDash();if(v==='cons')renderCons();if(v==='more')renderMore();
+  scrollTo(0,0);
+}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+
+/* ================= QR for driver ================= */
 /* Minimal QR encoder: byte mode, ECC level M, versions 1-40, auto mask by penalty */
 function makeQR(text){
   const ECC=[-1,10,16,26,18,24,16,18,22,22,26,30,22,22,24,24,28,28,26,26,26,26,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28];
@@ -652,9 +1436,13 @@ function makeQR(text){
 
 
 const appBase=()=>localStorage.getItem('appUrl')||(location.origin+location.pathname);
-const driverLink=d=>appBase()+'?d='+encodeURIComponent(d.name);
+function driverLink(d){
+  let l=appBase()+'?d='+encodeURIComponent(d.name)+'&i='+d.id;
+  const c=cfg();if(c&&c.u&&d.token)l+='&s='+b64({u:c.u,t:d.token});
+  return l;
+}
 function drawQR(link,name){
-  const m=makeQR(link),sc=Math.max(3,Math.floor(320/(m.length+8))),pad=4*sc,W=(m.length)*sc+pad*2,H=W+70;
+  const m=makeQR(link),sc=Math.max(4,Math.floor(560/(m.length+8))),pad=4*sc,W=m.length*sc+pad*2,H=W+70;
   const c=$('qrCanvas');c.width=W;c.height=H;const x=c.getContext('2d');
   x.fillStyle='#fff';x.fillRect(0,0,W,H);x.fillStyle='#000';
   m.forEach((row,y)=>row.forEach((on,i)=>{if(on)x.fillRect(pad+i*sc,pad+y*sc,sc,sc)}));
@@ -662,57 +1450,62 @@ function drawQR(link,name){
   x.font='bold 22px Tahoma,sans-serif';x.fillText(name,W/2,W+22);
   x.font='15px Tahoma,sans-serif';x.fillStyle='#444';x.fillText('امسح الكود لفتح يومية السائق',W/2,W+48);
 }
-function openQR(){
+async function openQR(){
   const d=drivers.find(x=>x.id===cur);if(!d)return;
+  if(syncOn())await tokenOf(d);
   if(!/^https?:\/\//.test(appBase())){
     const u=prompt('التطبيق مفتوح من ملف على الموبايل، والسائق مش هيقدر يفتحه. اكتب رابط التطبيق على الإنترنت (مثال: https://اسمك.github.io/driver/)');
     if(!u||!/^https?:\/\//.test(u.trim())){toast('لازم الرابط يبدأ بـ https://',4000);return}
     localStorage.setItem('appUrl',u.trim());
   }
   try{drawQR(driverLink(d),d.name)}catch(e){toast('الرابط طويل جدًا على الكود');return}
-  $('qrLink').textContent=appBase();$('qrModal').style.display='flex';
+  $('qrLink').textContent=driverLink(d);$('qrTopic').textContent=d.token?'موضوع إشعارات ntfy لهذا السائق: '+topicOf(d.token):'';$('qrModal').style.display='flex';schedulePublish();
 }
 const qrBlob=()=>new Promise(r=>$('qrCanvas').toBlob(r,'image/png'));
+$('qrRevoke').onclick=async()=>{
+  const d=drivers.find(x=>x.id===cur);if(!d)return;
+  if(!confirm('إلغاء كود '+d.name+'؟ الـ QR القديم هيقف، وهتبعت له كود جديد.'))return;
+  const old=d.token;
+  if(old&&syncOn())await api('','DELETE',undefined,old).catch(()=>{});
+  d.token='';await tokenOf(d);
+  try{drawQR(driverLink(d),d.name);$('qrLink').textContent=driverLink(d);$('qrTopic').textContent='موضوع إشعارات ntfy لهذا السائق: '+topicOf(d.token)}catch(e){}
+  schedulePublish();renderNotif();toast('تم إصدار كود جديد — ابعته للسائق');
+};
 $('qrClose').onclick=()=>$('qrModal').style.display='none';
 $('qrUrl').onclick=()=>{
   const u=prompt('رابط التطبيق على الإنترنت',appBase());
   if(u&&u.trim()&&!/^https?:\/\//.test(u.trim())){toast('لازم الرابط يبدأ بـ https://',4000);return}
-  if(u&&u.trim()){localStorage.setItem('appUrl',u.trim());const d=drivers.find(x=>x.id===cur);try{drawQR(driverLink(d),d.name);$('qrLink').textContent=appBase()}catch(e){toast('الرابط طويل جدًا')}}
+  if(u&&u.trim()){localStorage.setItem('appUrl',u.trim());const d=drivers.find(x=>x.id===cur);try{drawQR(driverLink(d),d.name);$('qrLink').textContent=driverLink(d)}catch(e){toast('الرابط طويل جدًا')}}
 };
-$('qrSave').onclick=async()=>{
-  const d=drivers.find(x=>x.id===cur),a=document.createElement('a');
-  a.href=URL.createObjectURL(await qrBlob());a.download='qr-'+d.name+'.png';a.click();
-};
+$('qrSave').onclick=async()=>{download(await qrBlob(),'qr-'+drvName(cur)+'.png')};
 $('qrSend').onclick=async()=>{
   const d=drivers.find(x=>x.id===cur),link=driverLink(d),blob=await qrBlob();
   const file=new File([blob],'qr-'+d.name+'.png',{type:'image/png'});
   const text='مرحبًا '+d.name+'، افتح تطبيق اليومية من هذا الرابط:\n'+link;
-  try{
-    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});return}
-  }catch(e){if(e.name==='AbortError')return}
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=file.name;a.click();
-  window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
-  toast('تم حفظ الصورة — أرفقها في واتساب');
+  try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});return}}catch(e){if(e.name==='AbortError')return}
+  download(blob,file.name);window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');toast('تم حفظ الصورة — أرفقها في واتساب');
 };
 async function handleLink(){
   const p=new URLSearchParams(location.search),name=p.get('d');
   if(!name)return;
   if(MODE!=='driver'){
     if((drivers.length||trips.length)&&!localStorage.getItem('pin')){
-      toast('هذا الجهاز فيه بيانات المدير. اضبط رمز المدير من تبويب العهدة قبل تحويله لوضع السائق.',6000);
+      toast('هذا الجهاز فيه بيانات المدير. اضبط رمز المدير من تبويب المزيد قبل تحويله لوضع السائق.',6000);
       history.replaceState(null,'',location.pathname);return;
     }
     if((drivers.length||trips.length)&&!confirm('تحويل هذا الجهاز إلى وضع السائق؟ لن ترجع للمدير إلا بالرمز.')){history.replaceState(null,'',location.pathname);return}
   }
-  let d=drivers.find(x=>x.name===name);
-  if(!d){d={id:uid(),name};await put('drivers',d);drivers.push(d)}
+  const s=p.get('s');if(s){try{const c=unb64(s);if(c.u&&c.t)localStorage.setItem('sync',JSON.stringify(c))}catch(e){}}
+  const i=p.get('i');
+  let d=drivers.find(x=>x.id===i)||drivers.find(x=>x.name===name);
+  if(!d){d={id:i||uid(),name};await put('drivers',d);drivers.push(d)}
   localStorage.setItem('curDriver',d.id);localStorage.setItem('mode','driver');
   location.replace(location.pathname);
 }
 
-/* ---------- init ---------- */
+/* ================= init ================= */
 if('serviceWorker' in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{});
-openDB().then(()=>{$('tDate').value=today();renderItems();return load()}).then(handleLink);
+openDB().then(()=>{$('tDate').value=today();renderItems();if(MODE==='admin')show('dash');return load()}).then(handleLink).then(()=>{pollAll()});
 </script>
 </body>
 </html>
